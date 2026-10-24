@@ -1,0 +1,53 @@
+<!doctype html>
+<!-- Source: rbadillap design contract v4.1. Rendered at 640×320, device scale 2. -->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500&display=block" rel="stylesheet">
+<style>
+  :root {
+    --background: #fafaf8; --border: #e4e4e7; --foreground: #52525b;
+    --primary: #18181b; --muted-foreground: #a1a1aa;
+    --text-2xs: 10.5px; --text-body: 15px; --text-lg: 20px;
+  }
+  html.dark {
+    --background: #0a0a0a; --border: #27272a; --foreground: #a1a1aa;
+    --primary: #d4d4d8; --muted-foreground: #71717a;
+  }
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 640px; height: 320px; background: var(--background); }
+  body {
+    font-family: "Schibsted Grotesk", sans-serif; color: var(--foreground);
+    padding: 44px 56px; display: flex; flex-direction: column; justify-content: space-between;
+    -webkit-font-smoothing: antialiased;
+  }
+  .mark { color: var(--primary); display: block; }
+  h1 { color: var(--primary); font-size: var(--text-lg); font-weight: 500; letter-spacing: -0.01em; margin-bottom: 6px; }
+  p { font-size: var(--text-body); line-height: 1.65; max-width: 400px; }
+  .section-label { display: flex; align-items: center; gap: 10px; }
+  .dot { width: 5px; height: 5px; border-radius: 50%; background: var(--primary); flex: none; }
+  .label { font-family: "JetBrains Mono", monospace; font-size: var(--text-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-foreground); white-space: nowrap; }
+  .rule { flex: 1; height: 1px; background: var(--border); }
+</style>
+</head>
+<body>
+  <svg class="mark" width="150" height="42" viewBox="0 0 150 42" fill="none" aria-hidden="true">
+    <line x1="0" y1="34" x2="150" y2="34" stroke="currentColor" stroke-width="1" opacity="0.9" />
+    <path d="M 49 34 A 26 26 0 0 1 101 34" stroke="currentColor" stroke-width="1.4" fill="none" />
+    <circle cx="49" cy="34" r="2.4" fill="currentColor" />
+    <circle cx="101" cy="34" r="2.4" fill="currentColor" />
+    <circle cx="75" cy="8" r="1.6" fill="currentColor" />
+  </svg>
+  <div>
+    <h1>sre</h1>
+    <p>A senior SRE's method, packaged as agent skills. Every skill leaves a reusable result in your repository.</p>
+  </div>
+  <div class="section-label">
+    <span class="dot"></span>
+    <span class="label">Define · Design · Ship · Observe · Respond · Learn</span>
+    <span class="rule"></span>
+  </div>
+</body>
+<script>if (location.hash === "#dark") document.documentElement.classList.add("dark");</script>
+</html>
