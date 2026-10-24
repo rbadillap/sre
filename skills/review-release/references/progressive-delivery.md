@@ -1,6 +1,6 @@
 # Progressive delivery, by platform
 
-Examples for step 5 of the skill.
+Examples for step 6 of the skill.
 
 ## Kubernetes with Argo Rollouts
 
