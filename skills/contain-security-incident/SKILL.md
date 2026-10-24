@@ -14,7 +14,7 @@ metadata:
 
 **The result:** `reliability/incidents/<date>-<slug>.md`, from [the template](assets/security-incident.md), kept as a running record.
 
-**Safety:** proposes. Every containment action is a proposal for a person, with its risk and how to undo it. Nothing is deleted.
+**Safety:** proposes. Every containment action is a proposal for a person, with its risk and how to undo it. Nothing the attacker created is deleted; a compromised workload is replaced only after its evidence is captured.
 
 ## Steps
 
@@ -22,10 +22,10 @@ metadata:
 2. **Reframe.** Apply `reframe-first`. Drift, an odd account or an open port may be a symptom of access, not a mistake.
 3. **Preserve evidence before changing anything.** Export the audit logs that cover the period, and save the current configuration of everything you're about to change.
 4. **Contain the access, within the first minutes.** Apply `reversible-first`, with its exception: preserve, then contain.
-   - **Stop current sessions,** including temporary credentials that are still valid: on most platforms that means revoking every session issued before now, not deleting the identity.
+   - **Stop current sessions,** including temporary credentials and tokens that are still valid, with whatever the platform offers to revoke sessions issued before now. Disabling a key or a password alone can leave sessions created from it working.
    - **Disable what the attacker created,** such as keys or accounts, without deleting them.
    - **Remove the access that was added,** such as an admin permission or an open network rule.
-   - **Close the way in:** if a workload was the entry point, it can mint fresh credentials. Isolate it.
+   - **Close the way in:** if a workload was the entry point, it can mint fresh credentials. Isolate it, capture its evidence, then replace it.
 5. **Protect legitimate workloads.** Workloads that share the compromised identity usually get new credentials on their own after a session revocation. Say how each one is affected, and plan to move them to identities of their own, with only the access each needs. Don't keep an untrusted workload online to avoid downtime.
 6. **Find persistence.** Search the audit logs from the first suspicious action, not from when you noticed: identities, keys, trust or access policies, scheduled jobs, functions, instances and network changes the attacker could have made.
 7. **Assume exposure of everything reachable.** Rotate every secret the compromised identity could read. Ask whether user or customer data could have been read: if yes, legal and customer communication are part of the incident (`verified-impact`).
