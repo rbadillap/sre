@@ -41,6 +41,7 @@ This page covers orchestrators and the router. Disciplines have [their own page]
 | `respond-to-alert` | Reframe the problem. Scope it (regions, tenants, errors or latency). Look for what changed, even with no deploy. Mitigate with what can be undone. Share only confirmed impact. Escalate on clear criteria: time without a safe fix, data at stake, a provider involved |
 | `review-release` | Separate the deploy from the release. Check state compatibility across the versions that can coexist. Set the observation time longer than the effect it waits for. Decide whether rollback is safe or the change needs a forward plan |
 | `find-blind-spots` | Ask what each signal can't see. Look for failures before the request reaches the service. Look at the worst tenant, not the average |
+| `write-postmortem` | Start from the record. Confirm the impact. Rebuild the timeline. Find contributing factors, not one root cause, about systems and not people. Ask why it wasn't detected sooner. Turn lessons into defaults, each with an owner |
 
 New orchestrators add their row here in the same pull request.
 
@@ -56,7 +57,7 @@ New orchestrators add their row here in the same pull request.
 
 **10. It writes only to `reliability/`, and names the template it fills.**
 - Why: one folder is the paved road. If each skill writes where it likes, there's no road.
-- Check: every file the skill creates is under `reliability/` and comes from a template in `templates/`.
+- Check: every file the skill creates is under `reliability/` and comes from a template in the skill's own `assets/` folder.
 
 **11. The method is in the body; the stack is in `references/`.**
 - Why: the same skill should work for a team on Kubernetes, on serverless or on bare metal.
