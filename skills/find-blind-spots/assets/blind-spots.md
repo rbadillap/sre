@@ -1,36 +1,39 @@
-# Blind spots: <service or system>
+# Blind spots: <system>
 
-<!-- Filled by the find-blind-spots skill. Keep it current: update it when a gap is closed or a new one is found. -->
+<!-- Filled by the find-blind-spots skill. Keep it current: update it when a gap is closed or a new one is found. Label claims: verified (say how), hypothesis (say what would confirm it), not verified (say why). -->
 
 Reviewed on: <date>
 Reviewed by: <person or agent>
 
+## Reframe
+
+<!-- As it arrived, what that assumed, and the question worked on instead. -->
+
 ## What users need to do
 
-<!-- The few actions that matter. Every gap below hides one of these. -->
+<!-- Users can be internal. For each action: covered (by which signal), or see the gaps below. List the patterns that don't apply. -->
 
-1. <user action>
-2. <user action>
+| # | User action | Who | Covered by | Patterns that don't apply |
+|---|---|---|---|---|
+| 1 | <action> | <customer, operator, ...> | <signal, or "gaps below"> | <patterns> |
 
 ## Signals that exist
 
-| Signal | Measures | Where | Pages |
-|---|---|---|---|
-| <name> | <what> | <client, edge, service, dependency> | <yes, warns, no> |
+| Signal | Measures | Where | Pages, warns or dashboard | Who sees it | Label |
+|---|---|---|---|---|---|
+| <name> | <what> | <user side, entry point, service, dependency> | <level> | <person or team, or "nobody"> | <verified / hypothesis / not verified> |
 
 ## Gaps
 
-<!-- One row per gap. Mark each as verified (you saw it) or assumed. -->
+| Rank | User action | What can fail unseen | Pattern | Reach | Unnoticed for | Label |
+|---|---|---|---|---|---|---|
+| 1 | <#> | <failure> | <pattern> | <users, devices, tenants> | <how long> | <verified / hypothesis / not verified> |
 
-| User action | What can fail unseen | Pattern | Reach | Verified or assumed |
+## Proposals
+
+| Gap | Signal or check | Where | Page, warn or check | Owner |
 |---|---|---|---|---|
-| <action> | <failure> | <pattern from the skill> | <users, tenants, regions> | <verified: how / assumed: why> |
-
-## Proposed signals
-
-| Gap | Signal | Where | Page or warn | Owner |
-|---|---|---|---|---|
-| <gap> | <what it measures> | <where> | <page / warn> | <owner> |
+| <rank> | <what it measures or checks> | <where> | <page / warn / check> | <one person> |
 
 ## Not verified
 
