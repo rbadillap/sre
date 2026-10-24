@@ -1,6 +1,6 @@
 ---
 name: scope-and-signal
-description: Discipline. Find out how far a reliability problem reaches, and pick the signals that describe what users live, before acting. Applied by every orchestrator in this package when sizing an incident, a release risk or a monitoring gap.
+description: Discipline. Find out how far a reliability problem reaches, and pick the signals that describe what users live, before acting. Applied by the orchestrators in this package when sizing an incident, a release risk or a monitoring gap.
 license: MIT
 metadata:
   sre-layer: discipline

@@ -1,6 +1,6 @@
 ---
 name: reversible-first
-description: Discipline. Stop the impact before finding the root cause, starting with actions that can be undone; anything irreversible waits for a person. Applied by every orchestrator in this package before proposing a mitigation, a rollback or a change in production.
+description: Discipline. Stop the impact before finding the root cause, starting with actions that can be undone; anything irreversible waits for a person. Applied by the orchestrators in this package before proposing a mitigation, a rollback or a change in production.
 license: MIT
 metadata:
   sre-layer: discipline
@@ -8,7 +8,7 @@ metadata:
 
 # Reversible first
 
-**Mitigate first, with what can be undone. Anything that can't be undone waits for a person.**
+**Mitigate first with what can be undone, leaving anything irreversible to a person.**
 
 ## When
 

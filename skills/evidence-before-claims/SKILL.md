@@ -1,6 +1,6 @@
 ---
 name: evidence-before-claims
-description: Discipline. Verify before saying something is true, and say what wasn't verified. Applied by every orchestrator in this package before stating a cause, declaring a fix effective or reporting a result.
+description: Discipline. Verify before saying something is true, and say what wasn't verified. Applied by the orchestrators in this package before stating a cause, declaring a fix effective or reporting a result.
 license: MIT
 metadata:
   sre-layer: discipline

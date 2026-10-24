@@ -1,6 +1,6 @@
 ---
 name: verified-impact
-description: Discipline. Tell people what is known to be affected, without claiming a cause too early. Applied by every orchestrator in this package when writing status updates, customer messages, escalations or incident summaries.
+description: Discipline. Tell people what is known to be affected, without claiming a cause too early. Applied by the orchestrators in this package when writing status updates, customer messages, escalations or incident summaries.
 license: MIT
 metadata:
   sre-layer: discipline

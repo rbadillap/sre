@@ -1,6 +1,6 @@
 ---
 name: reframe-first
-description: Discipline. Before solving a reliability problem, state what the real problem is. Applied by every orchestrator in this package at the start of the work, and whenever a fix "should have worked" but didn't.
+description: Discipline. Before solving a reliability problem, state what the real problem is. Applied by the orchestrators in this package at the start of the work, and whenever a fix "should have worked" but didn't.
 license: MIT
 metadata:
   sre-layer: discipline

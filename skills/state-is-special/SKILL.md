@@ -1,6 +1,6 @@
 ---
 name: state-is-special
-description: Discipline. Data and shared state get their own plan, because rolling back code doesn't roll back data. Applied by every orchestrator in this package when a change, an incident or a recovery touches databases, caches, queues or stored files.
+description: Discipline. Data and shared state get their own plan, because rolling back code doesn't roll back data. Applied by the orchestrators in this package when a change, an incident or a recovery touches databases, caches, queues or stored files.
 license: MIT
 metadata:
   sre-layer: discipline

@@ -1,6 +1,6 @@
 ---
 name: paved-road
-description: Discipline. Prevent the next incident by turning what was learned into a default, not a reminder, so the reliable path is also the easiest one. Applied by every orchestrator in this package when proposing follow-ups, prevention or standards.
+description: Discipline. Prevent the next incident by turning what was learned into a default, not a reminder, so the reliable path is also the easiest one. Applied by the orchestrators in this package when proposing follow-ups, prevention or standards.
 license: MIT
 metadata:
   sre-layer: discipline
@@ -8,7 +8,7 @@ metadata:
 
 # Paved road
 
-**Make the safe path the easy path. A lesson becomes a default, not a reminder.**
+**Make the safe path the easy path, so a lesson becomes a default instead of a reminder.**
 
 ## When
 
