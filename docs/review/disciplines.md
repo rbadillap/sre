@@ -18,9 +18,9 @@ A discipline is a rule every orchestrator follows. It's small on purpose.
 - Why: disciplines are shared by every orchestrator and every team.
 - Check: no product names, commands or cloud services in the body.
 
-**5. Its name is a noun.**
+**5. Its name states a principle, not a task.**
 - Why: the name tells the layer.
-- Check: `reversible-first`, `state-is-special`, `verified-impact`. Not a verb.
+- Check: it reads as a rule (`reversible-first`, `state-is-special`, `expand-contract`), not as something you ask for done (`respond-to-alert`).
 
 **6. It's used by at least one orchestrator.**
 - Why: a discipline nobody calls is dead text.

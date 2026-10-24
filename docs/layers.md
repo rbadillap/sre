@@ -24,7 +24,7 @@ An orchestrator runs one moment of the work, from one stage of the [lifecycle](l
 
 A discipline is one rule, small and shared. The seven [moves of the method](method.md) are disciplines, plus two mechanisms that come up so often they earn their own: `idempotency` and `expand-contract`.
 
-- Names are nouns: `reversible-first`, `state-is-special`.
+- Names state a principle, not a task: `reversible-first`, `state-is-special`, `expand-contract`. An orchestrator's name is a task you ask for (`respond-to-alert`); a discipline's is a rule you follow.
 - A discipline has no stack. Product names and commands live in an orchestrator's `references/`.
 - Keeping each rule in one place means the package can't disagree with itself.
 

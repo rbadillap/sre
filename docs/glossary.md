@@ -5,7 +5,7 @@ The words the skills share. When a skill uses one of these terms, it means exact
 ## The package
 
 - **Orchestrator.** A skill that runs one moment of the work, like responding to an alert. Its name starts with a verb. See [layers](layers.md#orchestrators).
-- **Discipline.** A skill that holds one rule every orchestrator follows. Its name is a noun. See [layers](layers.md#disciplines).
+- **Discipline.** A skill that holds one rule the orchestrators follow. Its name states a principle, not a task. See [layers](layers.md#disciplines).
 - **Router.** The `sre` skill, which points to the right orchestrator for a situation.
 - **Template.** The structure a skill fills to leave a reusable result.
 - **Paved road.** A way of working delivered as a default, so the reliable path is also the easiest one. In this package, the templates and the `reliability/` folder.

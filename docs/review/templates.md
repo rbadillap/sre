@@ -8,7 +8,7 @@ A template is the paved road a skill leaves in someone's repository, under `reli
 
 **2. Every field says how to fill it.**
 - Why: an empty heading invites a guess.
-- Check: each field has a one-line instruction or an example, in a comment or placeholder.
+- Check: each field has a one-line instruction or an example, in a comment or placeholder. In a table, an empty cell is fine when its column header says what goes in it; the first row of each table shows the format.
 
 **3. It separates what's known from what isn't, with the same three labels everywhere.**
 - Why: a postmortem or a runbook that mixes facts and guesses misleads the next person. Different words for the same idea in different templates confuse both people and agents.

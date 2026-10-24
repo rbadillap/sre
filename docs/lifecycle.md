@@ -17,7 +17,7 @@ Learn feeds back into Define and Design. A postmortem can change an SLO, a revie
 
 ## You can enter at any stage
 
-Development work usually moves in order: idea, plan, code, review, merge. Reliability work doesn't. An alert enters at Respond at three in the morning, whatever stage the team was in. So orchestrators don't assume the previous stage happened. Each one starts from the situation in front of it, and recommends the next stage when it's done: Respond hands off to Learn, and Learn hands off to Define or Design.
+Development work usually moves in order: idea, plan, code, review, merge. Reliability work doesn't. An alert enters at Respond at three in the morning, whatever stage the team was in. So orchestrators don't assume the previous stage happened. Each one starts from the situation in front of it, and recommends the next skill when it's done: Respond hands off to Learn, and Learn ends in proposals that a person approves, which change what Define and Design start from.
 
 ## Where it comes from
 

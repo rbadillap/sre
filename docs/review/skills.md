@@ -10,7 +10,7 @@ This page covers orchestrators and the router. Disciplines have [their own page]
 
 **2. The name says the layer.**
 - Why: a reader, or an agent, should know what a skill is from its name alone.
-- Check: orchestrators start with a verb (`respond-to-alert`, `review-release`). Disciplines are nouns (`reversible-first`). The router is `sre`. Names are lowercase, digits and hyphens, as the Agent Plugins spec requires.
+- Check: orchestrators start with a verb (`respond-to-alert`, `review-release`). Disciplines state a principle (`reversible-first`). The router is `sre`. Names are lowercase, digits and hyphens, as the Agent Plugins spec requires.
 
 **3. The description says when to use it, in the words of that moment.**
 - Why: the agent picks a skill by matching its description against what someone just wrote. A description of what the skill is, instead of when it's needed, gets missed.

@@ -32,6 +32,6 @@ Most SRE packs are organized like the chapters of a book: one skill for SLOs, on
 | What a skill leaves | Advice or a document | A reusable result in `reliability/` |
 | Safety | Rarely stated | Declared by every orchestrator; nothing irreversible runs alone |
 | Learning | Ends in a postmortem | Postmortems lead to proposed changes to the skills, with approval |
-| Proof | Not shown | Evals drawn from real use, starting with two |
+| Proof | Not shown | Evals drawn from real use: two so far, run by hand |
 
 The topics are covered elsewhere. What this package adds is the structure that connects them and the loop that improves them.
