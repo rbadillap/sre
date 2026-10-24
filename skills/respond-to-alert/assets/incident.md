@@ -4,6 +4,7 @@
 
 Started: <date and time, with time zone>
 Severity: <level>
+Declared as an incident: <yes, at time / no, and why>
 Status: <investigating / mitigated / resolved>
 Responder: <person>
 Communications owner: <person, if different>
@@ -19,6 +20,10 @@ Communications owner: <person, if different>
 - Who: <regions, tenants, users>
 - What: <errors, latency, unavailable feature>
 - Since: <time>
+
+## What changed
+
+<!-- Deploys, configuration, scheduled jobs, traffic, providers, certificates. Or "nothing found", with what was checked. -->
 
 ## Timeline
 
