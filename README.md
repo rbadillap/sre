@@ -4,7 +4,7 @@ A senior SRE's method, packaged as agent skills.
 
 Most SRE skill packs are organized like the chapters of a book: one skill for SLOs, one for incidents, one for postmortems. This one follows the work itself. It moves through a lifecycle (define, design, ship, observe, respond, learn), and every orchestrator leaves a reusable result in your repository, under `reliability/`.
 
-> **Status:** version 0.1.0, not released yet. The repository isn't public, so the install commands below don't work yet.
+> **Status:** version 0.1.0, the first release. See the [changelog](CHANGELOG.md).
 
 ## What's inside
 
@@ -18,7 +18,7 @@ Skills investigate and propose. Anything that can't be undone waits for a person
 
 ## Install
 
-It's an [Agent Plugins](https://agent-plugins.org) plugin with [Agent Skills](https://agentskills.io) inside. Once the repository is public:
+It's an [Agent Plugins](https://agent-plugins.org) plugin with [Agent Skills](https://agentskills.io) inside.
 
 ```sh
 npx skills add rbadillap/sre
