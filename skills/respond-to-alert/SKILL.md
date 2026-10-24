@@ -40,9 +40,15 @@ Investigation examples by platform are in [references/investigation.md](referenc
 ## Done when
 
 - The reframe is written.
+- The scope is written: regions, groups, errors or latency, since when, with unknowns marked.
+- The severity is set, and whether an incident was declared.
+- What changed is written, or "nothing found" with what was checked.
+- Every mitigation has its time, how to undo it, and whether it worked.
+- Every escalation has its time and the criterion met, or "no escalation" with why.
+- Every update sent is recorded.
 - The user-facing signal is back to normal, confirmed.
-- The timeline has every fact and action with its time.
-- Every hypothesis is marked as confirmed, ruled out or still open.
+- The timeline has every fact and action with its time and its label (verified, hypothesis, not verified).
+- Every hypothesis is confirmed, ruled out or still open.
 - The handoff is written.
 
 Next: recommend `write-postmortem`.

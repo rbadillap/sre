@@ -14,7 +14,7 @@ Communications owner: <person, if different>
 
 ## Impact
 
-<!-- Confirmed impact only. Mark anything suspected as suspected. -->
+<!-- Confirmed impact only. Label anything not confirmed as a hypothesis. -->
 
 - Who: <regions, tenants, users>
 - What: <errors, latency, unavailable feature>
