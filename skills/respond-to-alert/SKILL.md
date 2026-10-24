@@ -25,7 +25,7 @@ metadata:
 5. **Follow the path of the request.** Walk the path users take, from the edge to the data: entry point, authentication, application, cache, queue, database, external dependencies. Compare latency and errors at each step to find where the time goes.
 6. **Look for what changed, even with no deploy.** Configuration, scheduled jobs, traffic (one large customer, retries piling up), dependency or provider maintenance, certificates, data growth.
 7. **Mitigate with what can be undone.** Apply `reversible-first`, including its check of second-order effects, and write each mitigation with how to undo it. If a mitigation touches data or state, apply `state-is-special` and hand it to a person.
-8. **Confirm the mitigation worked.** Apply `evidence-before-claims`: the user-facing signal recovers. If nothing changes, undo it and reconsider the hypothesis.
+8. **Confirm the mitigation worked.** Apply `evidence-before-claims`: the user-facing signal recovers. If nothing changes, undo it and reconsider the hypothesis. When the mitigation is a new release, it goes through the same checks that let the failure through, so its "success" proves little: confirm it over a window longer than the failure's delay.
 9. **Escalate on clear criteria.** Bring in another person when any of these is true, and bring the context (what you checked, what you ruled out, what you think it is):
    - Users are still affected after 15 to 20 minutes and there's no safe, reversible fix.
    - The fix touches data or state: a restore, a failover, a migration.
