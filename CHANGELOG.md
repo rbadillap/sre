@@ -9,3 +9,5 @@ The package follows [semantic versioning](https://semver.org): a new skill or te
 - The method, the lifecycle, the layers and the landscape, in `docs/`.
 - Review rules for skills, disciplines, templates, evals and documents, in `docs/review/`.
 - The shared glossary.
+- First orchestrators: `find-blind-spots`, `review-release`, `respond-to-alert` and `write-postmortem`, each with its template.
+- First disciplines: `reframe-first`, `scope-and-signal`, `reversible-first`, `state-is-special`, `evidence-before-claims`, `verified-impact` and `paved-road`.

@@ -21,7 +21,9 @@ Rules for any agent working in this repository. How the package works is in `doc
 - One folder per skill under `skills/`, with a `SKILL.md`. No nested folders: the Agent Plugins spec only reads immediate children.
 - Orchestrators start with a verb; disciplines are nouns. Lowercase, digits and hyphens only.
 - Every skill declares its safety level. No skill runs anything irreversible on its own.
-- Skills write only to `reliability/`, from a template in `templates/`.
+- Skills write only to `reliability/`, from a template in their own `assets/` folder.
+- Stack-specific examples go in the skill's `references/`, one level deep.
+- Every `SKILL.md` has `name` matching its folder, a `description` that says when to use it, `license: MIT`, and `metadata` with `sre-layer` and, for orchestrators, `sre-stage` and `sre-safety`.
 - Disciplines are applied by name, never copied.
 - A new orchestrator adds its row of moves to `docs/review/skills.md` in the same change.
 
