@@ -20,19 +20,19 @@ Security owner: <person, paged at time>
 
 | Time | Fact or action | Label |
 |---|---|---|
-| | | |
+| <hh:mm> | <what was seen or done> | <verified: how / hypothesis / not verified> |
 
 ## Containment
 
 | Time | Action | How to undo it | Worked? |
 |---|---|---|---|
-| | <revoke sessions / disable key / remove access / isolate workload> | | |
+| <hh:mm> | <revoke sessions / disable key / remove access / isolate workload> | <undo> | <signal that confirmed it> |
 
 ## Legitimate workloads
 
 | Workload | Shares the identity? | Effect of containment | Plan |
 |---|---|---|---|
-| | | | |
+| <name> | <yes / no> | <new credentials on its own / breaks> | <own identity, least access> |
 
 ## Persistence search
 
