@@ -7,7 +7,7 @@ The package has four layers. Each one has a single job.
 | Router | Sends you to the right orchestrator | `skills/sre/` |
 | Orchestrators | Run one moment of the work | `skills/<verb-name>/` |
 | Disciplines | Hold the rules every orchestrator follows | `skills/<noun-name>/` |
-| Templates | Become the reusable result in your repository | `templates/` |
+| Templates | Become the reusable result in your repository | `skills/<verb-name>/assets/` |
 
 ## Router
 
@@ -31,6 +31,8 @@ A discipline is one rule, small and shared. The seven [moves of the method](meth
 ## Templates
 
 Templates are where reliability meets platform engineering. **Reliability is what the package is about. Platform engineering is how it delivers.** A skill doesn't stop at advice: it fills a template and leaves the result in your repository, so the next person starts from a path instead of a blank page.
+
+Each template lives in the `assets/` folder of the orchestrator that fills it. The Agent Skills format resolves files relative to the skill, and a skill can be installed on its own, so the template has to travel with it.
 
 Everything the skills write goes under one folder:
 

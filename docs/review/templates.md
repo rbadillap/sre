@@ -1,6 +1,6 @@
 # Reviewing a template
 
-A template is the paved road a skill leaves in someone's repository, under `reliability/`.
+A template is the paved road a skill leaves in someone's repository, under `reliability/`. It lives in the `assets/` folder of the skill that fills it.
 
 **1. Someone else can reuse the result.**
 - Why: a filled template that only its author understands isn't a road.
