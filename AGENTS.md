@@ -41,7 +41,7 @@ Rules for any agent working in this repository. How the package works is in `doc
 
 - Message format: `area: what changed, in plain words`. Areas are the folder or file touched: `docs`, `skills`, `templates`, `evals`, `base`.
 - One commit per document, skill or template, so each can be reviewed or reverted alone.
-- Every user-visible change adds a line to `CHANGELOG.md` under Unreleased.
+- `CHANGELOG.md` gets an entry only when a version is released. Between releases, the git history is the record.
 - Commits are signed. If signing fails, stop and ask; never bypass it.
 - No co-author trailers or generated-by lines for AI tools, in commits or pull requests.
 - Edit files with your editing tools, not with shell scripts over the source.

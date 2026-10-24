@@ -61,9 +61,11 @@ Every skill declares one level:
 
 | Level | Means |
 |---|---|
-| Reads only | Looks at code, configuration and signals. Changes nothing |
-| Proposes | Writes a plan or a file in `reliability/`. Runs nothing in production |
+| Reads only | Looks at code, configuration and signals. Changes nothing except its own result file in `reliability/` |
+| Proposes | Writes a plan in `reliability/` with actions for a person to run. Runs nothing in production |
 | Acts with approval | Can run a step after a person approves it, one step at a time |
+
+Every level may write its own result in `reliability/`, and create the folder if it doesn't exist yet. That file is the only thing a skill changes without asking.
 
 No skill runs anything irreversible on its own: deleting, restoring, failing over, migrating data or changing access always ends in a proposal for a person.
 
@@ -75,4 +77,4 @@ The last stage of the lifecycle is where this package differs from a book. `lear
 - to an alert policy, so the signal that was missing exists;
 - to a discipline, when the rule itself was wrong or incomplete.
 
-It proposes; a person approves. Every approved change is recorded in `CHANGELOG.md` with the reason, so the package improves with each incident without losing track of why.
+It proposes; a person approves. Approved changes are listed in `CHANGELOG.md` with their reason when the next version is released, so the package improves with each incident without losing track of why.
