@@ -58,13 +58,13 @@ A simple test keeps the two halves together: every skill answers a reliability q
 
 ## Safety
 
-Every skill declares one level:
+Every orchestrator and the router declare one level, in their body and in `metadata` as `sre-safety`. Disciplines don't declare one: they hold rules and never act on their own.
 
-| Level | Means |
-|---|---|
-| Reads only | Looks at code, configuration and signals. Changes nothing except its own result file in `reliability/` |
-| Proposes | Writes a plan in `reliability/` with actions for a person to run. Runs nothing in production |
-| Acts with approval | Can run a step after a person approves it, one step at a time |
+| Level | `sre-safety` | Means |
+|---|---|---|
+| Reads only | `reads-only` | Looks at code, configuration and signals. Changes nothing except its own result file in `reliability/` |
+| Proposes | `proposes` | Writes a plan in `reliability/` with actions for a person to run. Runs nothing in production |
+| Acts with approval | `acts-with-approval` | Can run a step after a person approves it, one step at a time. No skill uses this level yet |
 
 Every level may write its own result in `reliability/`, and create the folder if it doesn't exist yet. That file is the only thing a skill changes without asking.
 

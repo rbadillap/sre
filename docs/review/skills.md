@@ -1,6 +1,6 @@
 # Reviewing a skill
 
-This page covers orchestrators and the router. Disciplines have [their own page](disciplines.md).
+This page covers orchestrators and the router. Disciplines have [their own page](disciplines.md). The router writes nothing, so the rules about a result (1, 10 and 13) apply only to orchestrators; its result is the recommendation itself.
 
 ## Shape
 

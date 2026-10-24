@@ -30,8 +30,8 @@ Most SRE packs are organized like the chapters of a book: one skill for SLOs, on
 | Organized by | Topic | [Lifecycle stage](lifecycle.md), with [layers](layers.md) |
 | What a skill teaches | A subject | A moment of the work, applying a shared [method](method.md) |
 | What a skill leaves | Advice or a document | A reusable result in `reliability/` |
-| Safety | Rarely stated | Declared by every skill; nothing irreversible runs alone |
-| Learning | Ends in a postmortem | Postmortems propose changes to the skills, with approval |
-| Proof | Not shown | Evals drawn from real use |
+| Safety | Rarely stated | Declared by every orchestrator; nothing irreversible runs alone |
+| Learning | Ends in a postmortem | Postmortems lead to proposed changes to the skills, with approval |
+| Proof | Not shown | Evals drawn from real use, starting with two |
 
 The topics are covered elsewhere. What this package adds is the structure that connects them and the loop that improves them.
