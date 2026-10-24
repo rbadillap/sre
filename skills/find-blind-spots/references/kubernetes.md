@@ -24,5 +24,5 @@ Examples of the patterns in the skill, for workloads running on Kubernetes.
 
 ## Silent backlogs
 
-- Pending pods (`kubectl get pods --field-selector=status.phase=Pending`) mean work that can't be scheduled: no capacity, a PodDisruptionBudget blocking, a missing volume.
+- Pending pods (`kubectl get pods --field-selector=status.phase=Pending`) mean work that can't be scheduled: no capacity, affinity or node selector rules nothing satisfies, a volume that can't be bound. (A PodDisruptionBudget doesn't cause Pending pods; it blocks evictions, which shows up as a drain that doesn't finish.)
 - Evictions and `OOMKilled` events show up in `kubectl get events`, not in application metrics.
