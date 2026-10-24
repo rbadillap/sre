@@ -41,3 +41,5 @@ Tool examples: [references/terraform.md](references/terraform.md).
 - Every urgent difference has a narrow containment proposal; every dangerous one has its cause and a fix.
 - Every difference has a decision: into the code, or back to the code.
 - Guardrails are proposed, and every claim is labeled.
+
+Next: for a replacement that's truly needed, recommend `review-release`; if the drift was unexplained, `write-postmortem`.

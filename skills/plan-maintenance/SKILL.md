@@ -40,3 +40,5 @@ Platform examples: [references/kubernetes.md](references/kubernetes.md).
 - Stateful systems follow their own procedure, step by step.
 - The order, batches, checks between batches and stop conditions are written.
 - How to confirm completion is written, and every claim is labeled.
+
+Next: if a stop condition fires during the maintenance, recommend `respond-to-alert`.

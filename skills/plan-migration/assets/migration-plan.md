@@ -21,9 +21,9 @@ Planned by: <person or agent>
 
 ## Steps
 
-| # | Phase (expand, migrate, switch, contract) | What it does | Release | Runs twice safely? | Impact on users | Size and batches | If it stops halfway | Way back | Verified by |
-|---|---|---|---|---|---|---|---|---|---|
-| 1 | | | | | | | | | |
+| # | Phase (expand, migrate, switch, contract) | What it does | Release | Runs twice safely? | Impact on users | Size and batches | If it stops halfway | Way back | Verified by | Label |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | <phase> | <action> | <release> | <yes / no, how> | <locks, slowdown, duration> | <rows, batches> | <state left behind> | <reversible, how> | <check> | <label> |
 
 ## Decisions for a person
 

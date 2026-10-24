@@ -40,3 +40,5 @@ metadata:
 - Every past incident checked has what would have paged and when, or a written reason.
 - Causes are routed to dashboards or tickets, with any exception explained.
 - The monthly review is planned, with an owner, and every claim is labeled.
+
+Next: if no one has looked for blind spots yet, recommend `find-blind-spots`.

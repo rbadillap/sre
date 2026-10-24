@@ -4,6 +4,7 @@ description: Router for site reliability work. Use when you're not sure which re
 license: MIT
 metadata:
   sre-layer: router
+  sre-safety: reads-only
 ---
 
 # SRE router

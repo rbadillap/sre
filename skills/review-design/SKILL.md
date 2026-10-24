@@ -36,3 +36,5 @@ metadata:
 - Shutdown, restart, health checks, repeated work, state and capacity each have a finding or a "no issue found".
 - Operations has SLOs, alerts, a runbook and an owner, or the gap is a finding.
 - Every finding has a risk, a change and a blocking flag, and every claim is labeled.
+
+Next: for missing SLOs or alerts, recommend `define-slos` or `design-alerts`; before launch, `review-release`.
