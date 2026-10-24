@@ -19,11 +19,11 @@ Rules for any agent working in this repository, each with its reason. How the pa
 ## Skills
 
 - One folder per skill under `skills/`, with a `SKILL.md`, and no nesting. Why: the Agent Plugins spec only reads immediate children.
-- Orchestrators start with a verb; disciplines are nouns; lowercase, digits and hyphens only. Why: the name tells the layer, and the specs require the characters.
+- Orchestrators are named as a task, starting with a verb; disciplines as a principle; lowercase, digits and hyphens only. Why: the name tells the layer, and the specs require the characters.
 - Orchestrators and the router declare a safety level, in the body and as `sre-safety`. No skill runs anything irreversible on its own. Why: people need to know what a skill may do before running it.
 - Skills write only to `reliability/`, from a template in their own `assets/` folder. Why: one folder is the paved road, and a skill can be installed alone.
 - Stack-specific examples go in the skill's `references/`, one level deep. Why: the method has to work on any platform.
-- Every `SKILL.md` has `name` matching its folder, a `description` that says when to use it, `license: MIT`, and `metadata` with `sre-layer`, plus `sre-stage` for orchestrators and `sre-safety` for orchestrators and the router. Why: clients and `make validate` rely on them.
+- Every `SKILL.md` has `name` matching its folder, a `description` that says when to use it, `license: MIT`, and `metadata` with `sre-layer`, plus `sre-stage` for orchestrators and `sre-safety` for orchestrators and the router. Why: the specs require the first ones, and `make validate` checks the `sre-*` keys so the docs and the skills can't disagree.
 - Disciplines are applied by name, never copied. Why: two copies drift apart.
 - A new orchestrator adds its row of moves to `docs/review/skills.md` in the same change. Why: the row is what its review checks.
 
