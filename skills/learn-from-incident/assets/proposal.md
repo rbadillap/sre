@@ -26,8 +26,8 @@ From: <link to the postmortem, incident record or review>
 - Why: <reason>
 - Source: <line of the record>
 - Review rules checked (package proposals only): <which pass; any that break, with the separate rule change>
-- Opened as: <issue or pull request link, for package proposals>
 - Decision: <approved / rejected / changed, by whom, when>
+- Opened as (package proposals, after approval and rewritten in general terms): <issue or pull request link>
 
 ## Not ready
 
