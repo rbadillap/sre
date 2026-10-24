@@ -32,6 +32,11 @@ Rules for any agent working in this repository. How the package works is in `doc
 - `plugin.json` stays valid against the Agent Plugins 1.0.0 schema.
 - Bump `version` with every release, following the rules in `CHANGELOG.md`.
 
+## Validation
+
+- Run `make validate` before every commit that touches `skills/` or `plugin.json`. It needs `uv`.
+- Pin tool versions in the `Makefile` from their live registries, at least 7 days old.
+
 ## Commits
 
 - Message format: `area: what changed, in plain words`. Areas are the folder or file touched: `docs`, `skills`, `templates`, `evals`, `base`.
