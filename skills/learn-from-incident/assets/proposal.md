@@ -8,24 +8,45 @@ From: <link to the postmortem, incident record or review>
 
 ## Reframe
 
+<!-- Not what went wrong, but what in the way of working let it happen or slowed the response. -->
+
 ## Lessons
 
-| # | Lesson | Moment it hurt | Lives in | Seen before? |
-|---|---|---|---|---|
-| 1 | | <missing step, misleading step, unasked question, missing signal> | <package, team path, system> | <no / link> |
+| # | Lesson | Moment it hurt | State (new, covered but not used, already adopted) | Lives in | Seen before? | Label |
+|---|---|---|---|---|---|---|
+| 1 | <lesson> | <missing step, misleading step, unasked question, missing signal, unused check> | <state, and where it's covered or adopted> | <package, team path, sent back to the system> | <no / link> | <label> |
 
 ## Proposals
 
 ### 1. <short title>
 
-- File: <path>
+- File: <path, and repository>
 - Current text: <quote, or "new">
 - Proposed text: <quote>
 - Why: <reason>
 - Source: <line of the record>
-- Review rules checked: <which pass; any that break>
+- Review rules checked (package proposals only): <which pass; any that break, with the separate rule change>
+- Opened as: <issue or pull request link, for package proposals>
 - Decision: <approved / rejected / changed, by whom, when>
 
+## Not ready
+
+<!-- Lessons that can't be written as a change yet, and what's missing. -->
+
+| Lesson | What's missing |
+|---|---|
+| <#> | <reason> |
+
+## Sent back to the system
+
+<!-- Lessons that belong in the postmortem's actions. -->
+
+| Lesson | Postmortem action |
+|---|---|
+| <#> | <link or action> |
+
 ## Not verified
+
+<!-- What you couldn't check, and why. -->
 
 - <item>

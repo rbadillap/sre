@@ -1,6 +1,6 @@
 # Postmortem: <short description>
 
-<!-- Filled by the write-postmortem skill. Blameless: describe systems and decisions, not people. -->
+<!-- Filled by the write-postmortem skill. Blameless: describe systems and decisions, not people. Label claims: verified (say how), hypothesis (say what would confirm it), not verified (say why). -->
 
 Date of the incident: <date>
 Written on: <date>
@@ -11,33 +11,41 @@ Incident record: <link to reliability/incidents/...>
 
 <!-- Three sentences: what happened, the impact, what changes. -->
 
+## Reframe
+
+<!-- Not what broke, but what let it break and stay unnoticed. -->
+
 ## Impact
 
-| | Value | Label (verified, hypothesis, not verified) |
+| | Value | Label |
 |---|---|---|
-| Who was affected | <regions, tenants, users> | |
-| What they couldn't do | <action> | |
-| Duration | <from - to> | |
+| Who was affected | <regions, tenants, users, devices> | <label> |
+| What they couldn't do | <action> | <label> |
+| Duration | <from - to> | <label> |
 
 ## Timeline
 
-| Time | Event |
-|---|---|
-| <hh:mm> | Started |
-| <hh:mm> | Detected, by <alert / customer / person> |
-| <hh:mm> | Response started |
-| <hh:mm> | Mitigated |
-| <hh:mm> | Resolved |
+| Time | Event | Label |
+|---|---|---|
+| <hh:mm> | Started | <label> |
+| <hh:mm> | Detected, by <alert / customer / person> | <label> |
+| <hh:mm> | Response started | <label> |
+| <hh:mm> | Mitigated | <label> |
+| <hh:mm> | Resolved | <label> |
 
 ## Contributing factors
 
-<!-- Several, usually. For each: what happened, and what made it possible. -->
+<!-- Several, usually. For each: what happened, what made it possible, and its label. -->
 
-1. <factor>: <what made it possible>
+1. <factor>: <what made it possible> (<label>)
 
 ## Why it wasn't detected sooner
 
-<!-- Always filled. Name the missing signal, if any. -->
+<!-- Always filled. Name the missing signal, if any, with its label. -->
+
+## Checks that existed but weren't used
+
+<!-- A review, a runbook or a skill that would have caught it. Which, and why it wasn't run. Or "none". -->
 
 ## What went well
 
@@ -51,8 +59,14 @@ Incident record: <link to reliability/incidents/...>
 
 ## Lessons for the playbook
 
-<!-- Runbooks, templates or rules that were wrong or missing. -->
+<!-- Runbooks, templates or rules that were wrong, missing or not used. -->
+
+| Lesson | Status (proposed, or adopted in where, when) |
+|---|---|
+| <lesson> | <status> |
 
 ## Not verified
+
+<!-- What you couldn't check, and why. -->
 
 - <item>
