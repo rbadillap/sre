@@ -19,7 +19,7 @@ metadata:
 ## Steps
 
 1. **Start from the record.** Read the incident file in `reliability/incidents/` if it exists. If not, rebuild the timeline from logs, messages and people, and say so.
-2. **Write the impact, confirmed.** Apply `verified-impact`: who, what, for how long, measured with the signal users live. Separate measured numbers from estimates.
+2. **Write the impact, confirmed.** Apply `verified-impact`: who, what, for how long, measured with the signal users live.
 3. **Rebuild the timeline.** Every key fact and decision with its time: when it started, when it was detected, when people responded, when it was mitigated, when it was resolved. The gaps between those times are findings.
 4. **Find the contributing factors, not one root cause.** Incidents usually need several things to go wrong. For each factor, say what made it possible. Write about systems and decisions, not people: "the alert depended on a tag nobody maintained", not "the team forgot the tag".
 5. **Ask why it wasn't detected sooner.** This question always gets its own section. If a signal was missing, name it, and recommend `find-blind-spots`.
@@ -33,5 +33,5 @@ metadata:
 
 - Impact, timeline, contributing factors and detection each have their section.
 - Every action has a place, an owner and a date.
-- Every claim is marked as measured, estimated or not verified.
+- Every claim is labeled verified, hypothesis or not verified.
 - The language describes systems and decisions, not people.

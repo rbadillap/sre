@@ -8,6 +8,10 @@ Status: <investigating / mitigated / resolved>
 Responder: <person>
 Communications owner: <person, if different>
 
+## Reframe
+
+<!-- As it arrived, what that assumed, and the problem worked on instead. -->
+
 ## Impact
 
 <!-- Confirmed impact only. Mark anything suspected as suspected. -->

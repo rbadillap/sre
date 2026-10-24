@@ -13,7 +13,7 @@ Incident record: <link to reliability/incidents/...>
 
 ## Impact
 
-| | Value | Measured or estimated |
+| | Value | Label (verified, hypothesis, not verified) |
 |---|---|---|
 | Who was affected | <regions, tenants, users> | |
 | What they couldn't do | <action> | |
