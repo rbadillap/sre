@@ -1,0 +1,76 @@
+# Layers
+
+The package has four layers. Each one has a single job.
+
+| Layer | Job | Where it lives |
+|---|---|---|
+| Router | Sends you to the right orchestrator | `skills/sre/` |
+| Orchestrators | Run one moment of the work | `skills/<verb-name>/` |
+| Disciplines | Hold the rules every orchestrator follows | `skills/<noun-name>/` |
+| Templates | Become the reusable result in your repository | `templates/` |
+
+## Router
+
+`sre` listens to the situation ("latency is up", "we're draining nodes tomorrow", "Terraform wants to replace the database") and points to the orchestrator for it. Use it when you're not sure where to start.
+
+## Orchestrators
+
+An orchestrator runs one moment of the work, from one stage of the [lifecycle](lifecycle.md). It asks the questions, applies the disciplines in order, and leaves a file in `reliability/`.
+
+- Names start with a verb: `respond-to-alert`, `review-release`, `define-slos`.
+- An orchestrator applies disciplines by name. It doesn't call another orchestrator. When the work moves to another stage, it recommends the next one: `respond-to-alert` ends by recommending `write-postmortem`.
+
+## Disciplines
+
+A discipline is one rule, small and shared. The seven [moves of the method](method.md) are disciplines, plus two mechanisms that come up so often they earn their own: `idempotency` and `expand-contract`.
+
+- Names are nouns: `reversible-first`, `state-is-special`.
+- A discipline has no stack. Product names and commands live in an orchestrator's `references/`.
+- Keeping each rule in one place means the package can't disagree with itself.
+
+## Templates
+
+Templates are where reliability meets platform engineering. **Reliability is what the package is about. Platform engineering is how it delivers.** A skill doesn't stop at advice: it fills a template and leaves the result in your repository, so the next person starts from a path instead of a blank page.
+
+Everything the skills write goes under one folder:
+
+```
+your-repo/
+└── reliability/
+    ├── slos/
+    ├── readiness/
+    ├── migrations/
+    ├── releases/
+    ├── runbooks/
+    ├── alerting/
+    ├── observability/
+    ├── incidents/
+    ├── changes/
+    └── postmortems/
+```
+
+One folder is the paved road. If each skill wrote where it liked, there would be no road.
+
+A simple test keeps the two halves together: every skill answers a reliability question and leaves a platform result. If it only gives advice, it's missing the platform half. If it only fills templates, it's missing the reliability question.
+
+## Safety
+
+Every skill declares one level:
+
+| Level | Means |
+|---|---|
+| Reads only | Looks at code, configuration and signals. Changes nothing |
+| Proposes | Writes a plan or a file in `reliability/`. Runs nothing in production |
+| Acts with approval | Can run a step after a person approves it, one step at a time |
+
+No skill runs anything irreversible on its own: deleting, restoring, failing over, migrating data or changing access always ends in a proposal for a person.
+
+## Learning
+
+The last stage of the lifecycle is where this package differs from a book. `learn-from-incident` reads a postmortem and proposes changes:
+
+- to a template, so the next result asks the question that was missed;
+- to an alert policy, so the signal that was missing exists;
+- to a discipline, when the rule itself was wrong or incomplete.
+
+It proposes; a person approves. Every approved change is recorded in `CHANGELOG.md` with the reason, so the package improves with each incident without losing track of why.
