@@ -24,7 +24,7 @@ The release under review is version 2 of a demo application, with a new configur
 7. Uses absolute thresholds, since three devices have no traffic to compare.
 8. Finds that nothing checks the new value: the health endpoint can't see it.
 9. Notices that re-releasing a fix under the same name would deploy the old artifact, labeled as a hypothesis unless tested.
-10. Gives a verdict of ready with conditions, lists the conditions, and names the decision owner.
+10. Gives a verdict of ready with conditions or not ready, with the conditions or options that would make it safe (at least: a wait and a second check before production, and a check of the new value), and names the decision owner.
 
 ## Fails if
 
