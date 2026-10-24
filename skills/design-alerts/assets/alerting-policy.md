@@ -11,17 +11,19 @@ Written by: <person or agent>
 
 ## Alerts that exist
 
-<!-- Or: "no history available". -->
+<!-- One row per alert, or write "no history available". -->
 
 | Alert | Fired (last weeks) | Led to action? | Keep, change or delete |
 |---|---|---|---|
-| <alert> | <count> | <yes / no> | |
+| <alert> | <count> | <yes / no> | <decision> |
 
 ## Pages
 
-| Alert | Symptom or burn rate | Threshold | Windows (long / short) | Broken down by, minimum volume | Runbook | Owner |
-|---|---|---|---|---|---|---|
-| <alert> | <symptom / burn> | <from the script for burn rates> | | | <link> | <one person> |
+<!-- Kind: symptom, budget burn (thresholds from the script) or rare event. -->
+
+| Alert | Kind | Threshold | Windows (long / short) | Broken down by, minimum volume or "small by design" | Runbook | Owner | Label |
+|---|---|---|---|---|---|---|---|
+| <alert> | <kind> | <value> | <1h / 5m> | <group, volume> | <link> | <one person> | <label> |
 
 ## Tickets and dashboards
 
@@ -29,11 +31,21 @@ Written by: <person or agent>
 |---|---|---|
 | <cause> | <reason, or the exception that makes it page> | <ticket / dashboard> |
 
+## Past incidents
+
+<!-- What the policy would have done. -->
+
+| Incident | Would have paged? | When | If not, why that's acceptable or what changed |
+|---|---|---|---|
+| <link> | <yes / no> | <time after start> | <reason> |
+
 ## Review
 
 Monthly review owner: <person>
 Next review: <date>
 
 ## Not verified
+
+<!-- What you couldn't check, and why. -->
 
 - <item>

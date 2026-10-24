@@ -4,7 +4,7 @@
 
 Defined on: <date>
 Defined by: <person or agent>
-Reviewed with: <product, engineering, customers>
+Agreed with: <the people who own the decision, or "not yet agreed">
 
 ## Reframe
 
@@ -36,9 +36,9 @@ Reviewed with: <product, engineering, customers>
 
 ## SLOs
 
-| SLI | Target | Window | Broken down by | Achieved today | Error budget (from the script) |
-|---|---|---|---|---|---|
-| <sli> | <99.9%> | <28 days> | <tenant, region> | <value and label> | <allowed failure, as time> |
+| SLI | Target | Target from (data or hypothesis) | Window | Broken down by | Achieved today | Error budget (from the script) |
+|---|---|---|---|---|---|---|
+| <sli> | <99.9%> | <source> | <28 days> | <tenant, region, device group> | <value and label> | <as time, or as events for rare events> |
 
 ## Budget policy
 
