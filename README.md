@@ -1,5 +1,10 @@
 # sre
 
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="docs/assets/cover-dark.png">
+  <img alt="sre: a senior SRE's method, packaged as agent skills" src="docs/assets/cover-light.png">
+</picture>
+
 A senior SRE's method, packaged as agent skills.
 
 Most SRE skill packs are organized like the chapters of a book: one skill for SLOs, one for incidents, one for postmortems. This one follows the work itself. It moves through a lifecycle (define, design, ship, observe, respond, learn), and every orchestrator leaves a reusable result in your repository, under `reliability/`.

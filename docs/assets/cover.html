@@ -1,0 +1,65 @@
+<!doctype html>
+<!-- Source: rbadillap design contract v4.1. Rendered at 640×320, device scale 2. -->
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Schibsted+Grotesk:wght@400;500&display=block" rel="stylesheet">
+<style>
+  :root {
+    --background: #fafaf8; --border: #e4e4e7; --foreground: #52525b;
+    --primary: #18181b; --muted-foreground: #a1a1aa;
+    --text-2xs: 10.5px; --text-sm: 13.5px; --text-body: 15px; --text-lg: 20px;
+  }
+  html.dark {
+    --background: #0a0a0a; --border: #27272a; --foreground: #a1a1aa;
+    --primary: #d4d4d8; --muted-foreground: #71717a;
+  }
+  * { margin: 0; box-sizing: border-box; }
+  html, body { width: 640px; height: 320px; background: var(--background); }
+  body { font-family: "Schibsted Grotesk", sans-serif; color: var(--foreground); padding: 40px 56px; display: grid; grid-template-columns: 190px 1fr; column-gap: 40px; -webkit-font-smoothing: antialiased; }
+  .left { display: flex; flex-direction: column; justify-content: space-between; }
+  .mark { color: var(--primary); display: block; }
+  h1 { color: var(--primary); font-size: var(--text-lg); font-weight: 500; letter-spacing: -0.01em; margin-bottom: 6px; }
+  p { font-size: var(--text-sm); line-height: 1.65; }
+  .label, th, code { font-family: "JetBrains Mono", monospace; font-size: var(--text-2xs); letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted-foreground); font-weight: 400; }
+  code { text-transform: none; letter-spacing: 0.02em; color: var(--foreground); }
+  table { width: 100%; border-collapse: collapse; table-layout: fixed; align-self: center; }
+  th { text-align: left; padding: 0 0 8px; border-bottom: 1px solid var(--muted-foreground); }
+  td { padding: 7px 0; font-size: var(--text-sm); vertical-align: baseline; white-space: nowrap; }
+  tr + tr td { border-top: 1px solid var(--border); }
+  tbody tr:first-child td { border-top: 0; }
+  td:first-child { color: var(--primary); font-weight: 500; }
+  td.num { text-align: right; font-variant-numeric: tabular-nums; color: var(--primary); padding-right: 16px; }
+  td:last-child { color: var(--foreground); }
+</style>
+</head>
+<body>
+  <div class="left">
+    <svg class="mark" width="150" height="42" viewBox="0 0 150 42" fill="none" aria-hidden="true">
+      <line x1="0" y1="34" x2="150" y2="34" stroke="currentColor" stroke-width="1" opacity="0.9" />
+      <path d="M 49 34 A 26 26 0 0 1 101 34" stroke="currentColor" stroke-width="1.4" fill="none" />
+      <circle cx="49" cy="34" r="2.4" fill="currentColor" />
+      <circle cx="101" cy="34" r="2.4" fill="currentColor" />
+      <circle cx="75" cy="8" r="1.6" fill="currentColor" />
+    </svg>
+    <div>
+      <h1>sre</h1>
+      <p>A senior SRE's method, packaged as agent skills.</p>
+    </div>
+    <code>npx skills add rbadillap/sre</code>
+  </div>
+  <table>
+    <colgroup><col style="width: 42%"><col style="width: 14%"><col></colgroup>
+    <thead><tr><th>Layer</th><th></th><th>Role</th></tr></thead>
+    <tbody>
+      <tr><td>Router</td><td class="num">1</td><td>Finds the skill</td></tr>
+      <tr><td>Orchestrators</td><td class="num">12</td><td>Run the work</td></tr>
+      <tr><td>Disciplines</td><td class="num">9</td><td>Hold the rules</td></tr>
+      <tr><td>Templates</td><td class="num">12</td><td>Leave the path</td></tr>
+      <tr><td>Calculators</td><td class="num">2</td><td>Do the math</td></tr>
+    </tbody>
+  </table>
+</body>
+<script>if (location.hash === "#dark") document.documentElement.classList.add("dark");</script>
+</html>
