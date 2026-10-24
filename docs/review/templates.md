@@ -10,9 +10,13 @@ A template is the paved road a skill leaves in someone's repository, under `reli
 - Why: an empty heading invites a guess.
 - Check: each field has a one-line instruction or an example, in a comment or placeholder.
 
-**3. It separates what's known from what's assumed.**
-- Why: a postmortem or a runbook that mixes facts and guesses misleads the next person.
-- Check: fields that can hold a guess ask the writer to mark it as one.
+**3. It separates what's known from what isn't, with the same three labels everywhere.**
+- Why: a postmortem or a runbook that mixes facts and guesses misleads the next person. Different words for the same idea in different templates confuse both people and agents.
+- Check: fields that can hold a guess use the labels of `evidence-before-claims`: verified, hypothesis, not verified.
+
+**6. Every output the skill asks for has a field.**
+- Why: if a step or a "Done when" criterion asks for something the template has no place for, the writer either drops it or invents a place, and the next reader can't find it.
+- Check: go through the skill's steps and "Done when". Each output, including the reframe from `reframe-first`, has a field in the template.
 
 **4. It has no stack.**
 - Why: the same template serves every team.

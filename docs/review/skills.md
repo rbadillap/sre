@@ -39,7 +39,7 @@ This page covers orchestrators and the router. Disciplines have [their own page]
 | Orchestrator | Moves, in order |
 |---|---|
 | `respond-to-alert` | Reframe the problem. Scope it (regions, tenants, errors or latency). Look for what changed, even with no deploy. Mitigate with what can be undone. Share only confirmed impact. Escalate on clear criteria: time without a safe fix, data at stake, a provider involved |
-| `review-release` | Separate the deploy from the release. Check state compatibility across the versions that can coexist. Set the observation time longer than the effect it waits for. Decide whether rollback is safe or the change needs a forward plan |
+| `review-release` | Separate the deploy from the release. Check state compatibility across the versions that can coexist. Decide whether rollback is safe or the change needs a forward plan. Set the observation time longer than the effect it waits for, and name what the gate between steps checks and who moves past it |
 | `find-blind-spots` | Ask what each signal can't see. Look for failures before the request reaches the service. Look at the worst tenant, not the average |
 | `write-postmortem` | Start from the record. Confirm the impact. Rebuild the timeline. Find contributing factors, not one root cause, about systems and not people. Ask why it wasn't detected sooner. Turn lessons into defaults, each with an owner |
 
@@ -47,7 +47,7 @@ New orchestrators add their row here in the same pull request.
 
 **8. It uses disciplines by name and doesn't copy them.**
 - Why: two copies of a rule drift apart, and then the package disagrees with itself.
-- Check: the skill says "apply `reversible-first`" and doesn't restate the discipline's text.
+- Check: the skill says "apply `reversible-first`" and doesn't restate the discipline's explanation or mechanisms. Naming the move in one line, as rule 7 asks, isn't copying. Repeating how the discipline does it is.
 
 **9. Every part of the situation gets an answer.**
 - Why: the easiest step to skip is the one nobody asked about twice. Skipped parts are the most common gap in SRE answers.
@@ -62,3 +62,13 @@ New orchestrators add their row here in the same pull request.
 **11. The method is in the body; the stack is in `references/`.**
 - Why: the same skill should work for a team on Kubernetes, on serverless or on bare metal.
 - Check: `SKILL.md` reads the same if you replace "Kubernetes" with any other platform. Commands and product names appear only in `references/`.
+
+**12. It doesn't assume one kind of system.**
+- Why: a skill written for a web service with traffic and tenants misleads on a device fleet, a batch job or an internal platform.
+- Check: words like traffic, tenant or feature flag come with what to do when they don't apply. Users can be internal: an operator shipping a release is a user.
+
+## Done
+
+**13. "Done when" can be checked, and covers every step that produces something.**
+- Why: a skill can be "done" while skipping the steps that find the most.
+- Check: every criterion can be answered yes or no by reading the result. Every step whose output goes into the template appears in a criterion, including the reframe and the verified, hypothesis and not verified split.
