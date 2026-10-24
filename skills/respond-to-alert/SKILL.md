@@ -1,6 +1,6 @@
 ---
 name: respond-to-alert
-description: Guides the response to a production alert or an incident: scope it, find where it hurts, mitigate safely, communicate, and decide when to escalate. Use when an alert fires, users report errors or slowness, latency or error rates jump, or something is down. Phrases like "latency is up", "users can't log in", "we're getting 503s", "is this an incident", "should I wake someone up".
+description: Guides the response to a production alert or an incident. It scopes the problem, finds where it hurts, mitigates safely, communicates, and decides when to escalate. Use when an alert fires, users report errors or slowness, latency or error rates jump, or something is down. Phrases like "latency is up", "users can't log in", "we're getting 503s", "is this an incident", "should I wake someone up".
 license: MIT
 metadata:
   sre-layer: orchestrator

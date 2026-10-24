@@ -1,6 +1,6 @@
 ---
 name: write-postmortem
-description: Writes a blameless postmortem from an incident: timeline, impact, contributing factors, why it wasn't detected sooner, and follow-up actions that change defaults. Use after an incident is mitigated, or when someone asks for a postmortem, an incident review, a retrospective or "what happened and how do we stop it happening again".
+description: Writes a blameless postmortem from an incident, with the timeline, the impact, the contributing factors, why it wasn't detected sooner, and follow-up actions that change defaults. Use after an incident is mitigated, or when someone asks for a postmortem, an incident review, a retrospective or "what happened and how do we stop it happening again".
 license: MIT
 metadata:
   sre-layer: orchestrator
