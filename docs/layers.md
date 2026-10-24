@@ -48,7 +48,8 @@ your-repo/
     ├── observability/
     ├── incidents/
     ├── changes/
-    └── postmortems/
+    ├── postmortems/
+    └── learning/
 ```
 
 One folder is the paved road. If each skill wrote where it liked, there would be no road.
