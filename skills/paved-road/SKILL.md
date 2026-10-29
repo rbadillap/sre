@@ -26,7 +26,7 @@ When the fix is a one-off correction with no pattern behind it, don't build a ro
    3. A template field that asks the question that was missed.
    4. An alert that sees what nobody saw.
    5. A document, only when none of the above fits.
-2. **Make the safe way cheaper than the unsafe way.** If the safe path takes more steps, people will route around it.
+2. **Make the safe way cheaper than the unsafe way.** If the safe path takes more steps, people will route around it. When safety depends on limits that can be checked, the tool checks them when it runs and refuses what breaks them: the allowed targets, the batch size, the capacity left. Checking that an argument is a number, or asking "are you sure?", isn't enough.
 3. **Give every follow-up an owner and a place.** An action with no owner isn't a follow-up.
 4. **A lesson that comes back climbs the list.** If an earlier incident already produced an action for it, the new action is a default or a blocking check, never another document.
 
