@@ -20,7 +20,7 @@ These rules apply to every page in the repository, and to the words any change a
 
 **5. Nothing personal.**
 - Why: the package teaches a method. People's stories, employers and private incidents don't belong in a public repository.
-- Check: no names of companies, people or internal systems. Examples are written in general terms.
+- Check: no names of companies, people or internal systems. Examples are written in general terms. A link to public material keeps its attribution, because a citation has to be checkable; the text around it still doesn't name the company.
 
 **6. The why sits next to the rule.**
 - Why: this repository doesn't keep decision records. The reasoning lives in the documents themselves.
