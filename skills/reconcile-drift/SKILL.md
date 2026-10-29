@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** proposes. It never runs an apply. Every change is a proposal for a person, with its audit trail.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Reframe.** Apply `reframe-first`. Drift that opens access (a public port, a broad permission) may be a security incident. If so, switch to `contain-security-incident` now.
