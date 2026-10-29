@@ -1,6 +1,6 @@
 # Security incident: <short description>
 
-<!-- Filled by the contain-security-incident skill, as a running record. Label claims: verified (say how), hypothesis (say what would confirm it), not verified (say why). Nothing is deleted. -->
+<!-- Filled by the contain-security-incident skill, as a running record. Label claims: verified (say how), hypothesis (say what would confirm it), not verified (say why). For each line, write when it happened, with its source and precision, and when it was recorded, from the clock, if different; who did it; and, for an action, its status (proposed, done, result). Nothing is deleted. -->
 
 Started: <date and time, with time zone>
 Status: <containing / contained / recovering / closed>
@@ -18,9 +18,9 @@ Security owner: <person, paged at time>
 
 ## Timeline
 
-| Time | Fact or action | Label |
-|---|---|---|
-| <hh:mm> | <what was seen or done> | <verified: how / hypothesis / not verified> |
+| Happened (source) | Recorded | Fact or action, and who | Status | Label |
+|---|---|---|---|---|
+| <hh:mm, from log / record / person's report, or unknown> | <hh:mm, from the clock> | <what was seen or done, by whom> | <for an action: proposed / done / result> | <verified: how / hypothesis / not verified> |
 
 ## Containment
 
