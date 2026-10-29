@@ -37,6 +37,7 @@ The words the skills share. When a skill uses one of these terms, it means exact
 - **Observation time.** How long a canary runs before the next step. It has to be longer than the delay of the effect it waits for.
 - **Rollback-safe.** A change that can be undone by going back to the previous version. Changes to shared data often aren't.
 - **Forward plan.** The recovery for a change that isn't rollback-safe: fix forward instead of going back.
+- **Down migration.** A script that undoes a schema or data change. It's a way back only if it has been run.
 - **Expand and contract.** Changing a data structure in separate steps: add the new form next to the old one, move to it, and remove the old one only when going back is no longer needed.
 - **Idempotency.** An operation that gives the same result when it runs more than once, so a retry or a repeated message can't break anything.
 
