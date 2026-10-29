@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** proposes. It never edits a skill, template, runbook or policy itself. A person approves each proposal, and someone else applies it.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Start from the record.** Read the postmortem in `reliability/postmortems/` and its incident record, or the review that prompted this.
