@@ -23,6 +23,7 @@ metadata:
 1. **Start from the record.** Read the postmortem in `reliability/postmortems/` and its incident record, or the review that prompted this.
 2. **Reframe.** Apply `reframe-first`. The question isn't what went wrong in this incident, but what in the way of working let it happen or slowed the response.
 3. **Find the lessons.** Read the contributing factors, "why it wasn't detected sooner", "checks that existed but weren't used", and the playbook lessons. For each, name the moment it hurt: a step that was missing, a step that misled, a question nobody asked, a signal that didn't exist, or a check that existed and wasn't used.
+   - Also look for recurring manual work the record shows: toil. For each, write the task, how often it happens, the human time per run, the period, and where those numbers come from. Estimates are fine when labeled; write unknowns as unknown. Don't work out the team's total toil from incidents, and never use these numbers to judge a person.
 4. **Check what already covers it.** Before proposing anything, look for the lesson where it would live: the package's skills, the team's `reliability/` paths and runbooks, and earlier learning records. Each lesson is then one of:
    - **New:** nothing covers it.
    - **Covered, but not used:** a rule or a check existed and nobody ran it. The lesson is about when it gets used: a trigger in a runbook or a pipeline, a router entry, the phrases in a skill's description. Ask why it wasn't run.
@@ -40,6 +41,7 @@ metadata:
 
 - The record it comes from is linked, and the reframe is written.
 - Every lesson has the moment it hurt and a state: new, covered but not used, or already adopted.
+- Recurring manual work the record shows has its task, frequency, time per run, period and source, or "none found" is written.
 - Every new or unused lesson has a place; lessons sent back to the system are recorded as sent.
 - Every proposal has the file, the current text, the proposed text, the reason and the source line, or is recorded as not ready with what's missing.
 - Every package proposal is checked against the review rules, with any rule change proposed separately.
