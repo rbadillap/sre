@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** proposes. It reviews and writes a plan. It doesn't deploy, merge or change production.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Establish the change.** Read the diff, or the description if there's no diff yet, and say which one you reviewed. Also read how it will ship: the pipeline, scripts or tools that move it to production.
