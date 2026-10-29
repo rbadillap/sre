@@ -19,6 +19,7 @@ An orchestrator runs one moment of the work, from one stage of the [lifecycle](l
 
 - Names start with a verb: `respond-to-alert`, `review-release`, `define-slos`.
 - An orchestrator applies disciplines by name. It doesn't call another orchestrator. When the work moves to another stage, it recommends the next one: `respond-to-alert` ends by recommending `write-postmortem`.
+- If a discipline it names isn't installed, the orchestrator says so in its result and recommends installing the whole package. It doesn't guess the rule, because a guessed rule is how two copies drift apart.
 
 ## Disciplines
 
