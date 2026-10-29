@@ -27,7 +27,7 @@ metadata:
 7. **Cover the blind spots.** Signals for failures before the request, and for sources that go silent, come from `find-blind-spots`. Add the ones that should page.
 8. **Test the policy against past incidents.** For each incident in `reliability/incidents/` or the team's history, work out what each alert would have seen, and whether it would have paged and when. An incident that pages nobody under the new policy is a finding: adjust, or write why it's acceptable.
 9. **Every page has a runbook and an owner.** A page without a first step wastes the first ten minutes.
-10. **Plan the review.** Every month, look at each page: if it didn't need action, change it or delete it.
+10. **Plan the review.** Every month, look at each page: if it didn't need action, change it or delete it. Count the pages per period, with out-of-hours pages apart, and report the number to whoever sets priorities. On-call load is a number, not something the team absorbs.
 11. **Label every claim** (`evidence-before-claims`), and write the result.
 
 ## Done when
@@ -39,6 +39,6 @@ metadata:
 - The blind-spot signals that should page are included, or `find-blind-spots` hasn't been run and that's noted.
 - Every past incident checked has what would have paged and when, or a written reason.
 - Causes are routed to dashboards or tickets, with any exception explained.
-- The monthly review is planned, with an owner, and every claim is labeled.
+- The monthly review is planned, with an owner and who receives the on-call load, and every claim is labeled.
 
 Next: if no one has looked for blind spots yet, recommend `find-blind-spots`.
