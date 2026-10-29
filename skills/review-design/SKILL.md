@@ -26,7 +26,8 @@ metadata:
 4. **Check shutdown and restart.** What happens to work in progress when an instance stops: is it finished, handed back, or lost? How long does a stop take, and is the system given that long? What happens when everything restarts at once?
 5. **Check health checks.** Each check answers one question: can it take work, does it need a restart, has it finished starting. No shared dependency in a check that restarts instances, or a small outage restarts everything.
 6. **Check repeated and concurrent work.** Apply `idempotency` to anything retried or redelivered.
-7. **Check state.** Apply `state-is-special`: where state lives, how it's backed up, how a restore is tested, and how its structure changes over time (`expand-contract`).
+7. **Check state.** Apply `state-is-special`: where state lives, how it's backed up, and how its structure changes over time (`expand-contract`).
+   - **Restores are tested as an ongoing practice, not once.** Look for an owner and a frequency with its reason; evidence of the last restore and its result, with the data checked usable and the recovery time measured; an alert if the test fails or stops running; and a new test after a relevant change to how recovery works. This skill reviews that practice. It doesn't schedule or run a restore.
 8. **Check capacity and overload.** What's the limit, what happens past it (queue, shed, slow down, fall over), and is there room for an instance to fail or be replaced.
 9. **Check operations.** Are there SLOs (`define-slos`), alerts that page on symptoms (`design-alerts`), a runbook for the first five minutes, and an owner? Can it be released in steps (`review-release`)?
 10. **Write findings by risk,** each with what to change and whether it blocks the launch. Apply `paved-road` to the fixes. Label every claim (`evidence-before-claims`).
@@ -36,6 +37,7 @@ metadata:
 - What was reviewed is named, and the reframe is written.
 - Every dependency has its effect when slow, down and recovering, and is marked critical or not.
 - Shutdown, restart, health checks, repeated work, state and capacity each have a finding or a "no issue found".
+- Restore tests have an owner, a frequency, the last result with the recovery time, and an alert if they fail or stop, or each missing part is a finding.
 - Operations has SLOs, alerts, a runbook and an owner, or the gap is a finding.
 - Every finding has a risk, a change and a blocking flag, and every claim is labeled.
 
