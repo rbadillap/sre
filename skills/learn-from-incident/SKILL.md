@@ -31,7 +31,7 @@ metadata:
    - **The system itself:** a default or a pipeline check. Those go back to the postmortem's actions; record that they were sent back.
 6. **Write each proposal precisely.** The file, the current text, the proposed text, and why, with the line of the record it comes from. A lesson that can't be written as a change yet is recorded as not ready, with what's missing.
 7. **Check package proposals against its review rules.** The rules are in the package's repository, under `docs/review/` (https://github.com/rbadillap/sre/tree/main/docs/review). If a proposal breaks one, say which, and propose changing the rule separately. Package proposals are drafts: after a person approves one, they rewrite it in general terms, with no private details from the incident, and only then open it as an issue or pull request in that repository.
-8. **Check for repetition.** If an earlier learning record or incident pointed at the same lesson, link it. A lesson that comes back after a fix means the fix lived in the wrong place.
+8. **Check for repetition.** If an earlier learning record or incident pointed at the same lesson, link it. A lesson that comes back after a fix means the fix lived in the wrong place. Report a repeated lesson to whoever sets priorities, as reliability work, and apply the budget policy from `define-slos` if there is one.
 9. **Label every claim** (`evidence-before-claims`), and write the result for a person to approve.
 
 ## Done when
@@ -41,6 +41,6 @@ metadata:
 - Every new or unused lesson has a place; lessons sent back to the system are recorded as sent.
 - Every proposal has the file, the current text, the proposed text, the reason and the source line, or is recorded as not ready with what's missing.
 - Every package proposal is checked against the review rules, with any rule change proposed separately.
-- Repeated lessons are linked, and every claim is labeled.
+- Repeated lessons are linked and reported to whoever sets priorities, and every claim is labeled.
 
 Next: a person approves or rejects each proposal; approved package proposals go to the package's repository.
