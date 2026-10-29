@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** proposes. It reads signals and proposes actions. A person runs every action in production, and anything irreversible is a proposal with its risk.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Start the timeline.** Create the incident file now, and add a line with the time for every fact and every action from here on.
