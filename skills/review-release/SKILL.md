@@ -24,24 +24,26 @@ metadata:
 2. **Reframe.** Apply `reframe-first`. A deploy can succeed while the release fails. Review what users will get, not only whether the change installs.
 3. **Find the state.** Apply `state-is-special`, for the change and for the delivery itself. Answer each category, writing "none" where it applies: data stores, caches, queues, files, configuration stored outside the code, and the records of the system that delivers the release (artifact names, versions, device or server inventory). Say for each whether it's shared across versions or kept per instance.
 4. **Check compatibility across versions.** For shared state, name the transitions that must be safe during the rollout and after a rollback, and how they're tested.
-5. **Decide the way back.** For each artifact the release ships (code, configuration, data change, infrastructure), mark it **rollback-safe** or **needs a forward plan**, with any condition the rollback depends on. Also write the way back after the release is fully out and found bad later.
-6. **Plan the rollout.** Read [references/progressive-delivery.md](references/progressive-delivery.md) for your platform, then:
+5. **Check work that can run twice.** If the change adds or changes work that is retried or redelivered, such as a queue consumer, a webhook handler or a call retried on timeout, apply `idempotency`. Write how its safety was checked, or what's left to check. If nothing like that changes, write "doesn't apply" and why. A change can repeat an effect outside your systems without touching any schema or store.
+6. **Decide the way back.** For each artifact the release ships (code, configuration, data change, infrastructure), mark it **rollback-safe** or **needs a forward plan**, with any condition the rollback depends on. Also write the way back after the release is fully out and found bad later.
+7. **Plan the rollout.** Read [references/progressive-delivery.md](references/progressive-delivery.md) for your platform, then:
    - Release in steps: a share of traffic, a group of users or tenants, or a group of devices. Write how big the smallest step is.
    - **Name the gate between steps:** what it checks, and whether a person or a script moves to the next step.
    - Set the observation time at each step longer than the delay of the effects you're waiting for. List the candidate effects and their delays.
    - Write abort criteria in advance. Compare with the stable version when there's traffic to compare; when there isn't, use absolute thresholds.
    - An emergency path that skips the steps, such as one that answers an active attack in seconds, stays possible. Write when it may be used, who decides, what's watched after, and how to recover.
-7. **Check monitoring for the new behavior.** Apply `scope-and-signal`. If nothing would show that the new behavior is failing, it's a gap.
-8. **Give a verdict: ready, ready with conditions, or not ready.** For "ready with conditions", list each condition. For "not ready", offer options with the condition each depends on, applying `reversible-first`. Typical options: ship it turned off and enable it later; release to the smallest group first and hold; ship with minimum conditions (a tested recovery or forward fix, monitoring for the new behavior, a named owner, people available during and after). Adapt them when there are no flags or tenants.
-9. **Name who decides,** whatever the verdict. This skill makes risks and options clear; the person who owns the business risk decides, within existing policies. Mandatory security or compliance controls go through their exception process. If the decision goes against the recommendation, record which risk was accepted and by whom.
-10. **Label every claim.** Apply `evidence-before-claims`.
-11. **Write the result.**
+8. **Check monitoring for the new behavior.** Apply `scope-and-signal`. If nothing would show that the new behavior is failing, it's a gap.
+9. **Give a verdict: ready, ready with conditions, or not ready.** For "ready with conditions", list each condition. For "not ready", offer options with the condition each depends on, applying `reversible-first`. Typical options: ship it turned off and enable it later; release to the smallest group first and hold; ship with minimum conditions (a tested recovery or forward fix, monitoring for the new behavior, a named owner, people available during and after). Adapt them when there are no flags or tenants.
+10. **Name who decides,** whatever the verdict. This skill makes risks and options clear; the person who owns the business risk decides, within existing policies. Mandatory security or compliance controls go through their exception process. If the decision goes against the recommendation, record which risk was accepted and by whom.
+11. **Label every claim.** Apply `evidence-before-claims`.
+12. **Write the result.**
 
 ## Done when
 
 - The change reviewed is named (diff or description) and the reframe is written.
 - Every path the change can take to production is named, and an emergency path has its conditions, owner, observation and recovery.
 - Every state category is answered, including "none", and marked shared or per instance.
+- Work that can run twice says how its safety was checked or what's left, or "doesn't apply" with why.
 - Every artifact is marked rollback-safe or forward plan, with its conditions, and the way back after full release is written.
 - The rollout names its steps, the gate between them, observation times with the effects they wait for, and abort criteria.
 - Monitoring gaps for the new behavior are listed, or marked none.
