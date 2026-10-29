@@ -46,5 +46,6 @@ The words the skills share. When a skill uses one of these terms, it means exact
 - **Mitigation.** Stopping the impact, before the root cause is known.
 - **Reversible action.** One that can be undone, such as pausing a job or rate-limiting a tenant.
 - **Escalation.** Bringing in another person. It happens on clear criteria: users affected with no safe fix, data at stake, or a provider involved.
+- **Escalation threshold.** How long users can stay affected, with no safe fix, before another person is brought in. Each team sets its own.
 - **Confirmed impact.** What is known to be affected, as opposed to what is suspected.
 - **Postmortem.** The written account of an incident: timeline, contributing factors, actions with owners, and why it wasn't detected sooner.
