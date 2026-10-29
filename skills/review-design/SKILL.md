@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** proposes. It reviews and writes findings. It changes nothing.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Establish what's reviewed.** A design document, the code, the running system, or a mix. Say which.
