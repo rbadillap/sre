@@ -45,11 +45,11 @@ Monthly review owner: <person>
 Next review: <date>
 On-call load reported to: <whoever sets priorities>
 
-<!-- Each review adds a row. Out-of-hours pages are counted apart. -->
+<!-- Each review adds a row. Out-of-hours pages are counted apart. Pages are one signal of on-call load; add incidents and time spent when there's data. -->
 
-| Period | Pages | Out of hours | Didn't need action |
-|---|---|---|---|
-| <month> | <count> | <count> | <count> |
+| Period | Pages | Out of hours | Didn't need action | Incidents | Time spent handling them |
+|---|---|---|---|---|---|
+| <month> | <count> | <count> | <count> | <count, or unknown> | <hours, or unknown> |
 
 ## Not verified
 
