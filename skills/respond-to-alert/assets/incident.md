@@ -1,6 +1,6 @@
 # Incident: <short description>
 
-<!-- Filled by the respond-to-alert skill, as a running record. Add a line for every fact and action, with its time. -->
+<!-- Filled by the respond-to-alert skill, as a running record. Add a line for every fact and action, with its time from the system clock and who did it. -->
 
 Started: <date and time, with time zone>
 Severity: <level>
