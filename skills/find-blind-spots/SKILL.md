@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** reads only. It looks at code, configuration and signals, and changes nothing except its own result file.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Reframe.** Apply `reframe-first`. The question isn't "do we have monitoring" but "would we know if someone couldn't do X". Write the reframe in the result.
