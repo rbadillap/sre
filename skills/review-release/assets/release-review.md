@@ -36,6 +36,14 @@ Emergency path: <when it may be used, who decides, what's watched, how to recove
 |---|---|---|
 | <old reads new> | | |
 
+## Work that can run twice
+
+<!-- Retried or redelivered work the change adds or changes. Or "doesn't apply", with why. -->
+
+| Work | How its safety was checked (`idempotency`) | Left to check |
+|---|---|---|
+| <consumer, handler, retried call> | | |
+
 ## Way back
 
 | Artifact | Rollback-safe or forward plan | Condition | How |
