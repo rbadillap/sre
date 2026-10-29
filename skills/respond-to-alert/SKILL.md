@@ -21,8 +21,8 @@ metadata:
 ## Steps
 
 1. **Start the timeline.** Create the incident file now, and add a line with the time for every fact and every action from here on.
-   - Take each time from the system clock, in the time zone written in the header. Never estimate one. A time someone reports is written as reported, with who said it.
-   - You only see what you run or read. After each action you propose, ask the person what they did and what happened, and add it to the timeline with their name. That's the scribe role in incident response ([PagerDuty's guide](https://response.pagerduty.com/training/scribe/)).
+   - **Keep two times apart.** When something happened comes from where it was recorded: a log, a record, or a person's report, with that source and its precision ("about 10:00" stays approximate). When you wrote the line comes from the system clock, or a clock tool if there's no shell. If neither is available, write the time as unknown and ask for it when it matters, without stopping other work. Never work out a time from how long the conversation has taken. Write the time zone in the header, and keep both times when they differ.
+   - **Give every action a status.** You only see what you run or read. An action you propose goes in the timeline as proposed, then as done, reported by a person (with their name) or seen by you, then with its result. Proposing an action doesn't prove it ran. Ask only for what the record is missing. You also do the scribe's record keeping ([PagerDuty's guide](https://response.pagerduty.com/training/scribe/)), while you investigate, which a dedicated scribe doesn't.
 2. **Reframe.** Apply `reframe-first`, and write the reframe in the record.
 3. **Scope it.** Apply `scope-and-signal`: regions, tenants, errors or latency, since when. Write the unknowns as unknowns.
 4. **Decide the severity, and declare if it's an incident.** If users are affected beyond the team's thresholds, declare it now and open a channel. Don't wait for the cause. Apply `verified-impact` for the first update, even without a cause.
