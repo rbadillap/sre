@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** proposes. It writes a runbook. A person runs every step.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Establish the maintenance.** What's taken away (nodes, hosts, devices), how many at a time, and for how long.
