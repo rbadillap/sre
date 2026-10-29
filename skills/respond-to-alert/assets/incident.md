@@ -45,6 +45,8 @@ Communications owner: <person, if different>
 
 ## Mitigations
 
+<!-- For a mitigation that retries or replays work only: what makes repeating it safe (`idempotency`), and which effects stay uncertain. -->
+
 | Time | Action | How to undo it | Did it work? |
 |---|---|---|---|
 | <hh:mm> | <action> | <undo> | <signal that confirmed it> |
