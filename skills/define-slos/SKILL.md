@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** proposes. It reads the system and writes a definition. It changes no monitoring or configuration.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Reframe.** Apply `reframe-first`. The question isn't how available the servers are, but whether users can do what they came to do, on time.
