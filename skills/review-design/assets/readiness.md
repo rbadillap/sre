@@ -22,7 +22,7 @@ Reviewed from: <design document, code, running system>
 | Health checks | | |
 | Repeated and concurrent work | | |
 | State, backups, restores, structure changes | | |
-| Restore tests: owner, frequency, last result, recovery time, alert if they fail or stop | | |
+| Restore tests: owner, frequency and why, last result with data checked usable, recovery time, alert if they fail or stop, retest after relevant changes | | |
 | Capacity and overload | | |
 
 ## Operations
