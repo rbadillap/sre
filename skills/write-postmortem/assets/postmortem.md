@@ -33,6 +33,14 @@ Incident record: <link to reliability/incidents/...>
 | <hh:mm> | Mitigated | <label> |
 | <hh:mm> | Resolved | <label> |
 
+## Earlier incidents with the same cause
+
+<!-- Link each one, and say why its actions didn't prevent this one: never done, done as a reminder instead of a default, or done in the wrong place. Or "none found". -->
+
+| Earlier incident | Its action | Why it didn't prevent this one | Label |
+|---|---|---|---|
+| <link> | <action> | <never done / a reminder / the wrong place> | <label> |
+
 ## Contributing factors
 
 <!-- Several, usually. For each: what happened, what made it possible, and its label. -->
@@ -41,7 +49,7 @@ Incident record: <link to reliability/incidents/...>
 
 ## Why it wasn't detected sooner
 
-<!-- Always filled. Name the missing signal, if any, with its label. -->
+<!-- Always filled. Name the missing signal, if any, with its label. A signal that existed and people were used to, such as a page that gets dismissed, is a finding too. -->
 
 ## Checks that existed but weren't used
 
