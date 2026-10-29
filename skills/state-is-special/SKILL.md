@@ -24,8 +24,9 @@ For stateless changes, don't invent risk. A change that only alters logic, with 
 2. **Make state changes compatible before they ship.** Every version that can run at the same time must read what the others write. Apply `expand-contract`.
 3. **Make repeated work safe.** Apply `idempotency`.
 4. **Treat a snapshot as part of a recovery, not as a rollback.** Restoring a snapshot loses everything written after it. Say how much, and let a person decide.
-5. **Unknown cached data is a miss, unless it guards security.** If cached data can be rebuilt, an unknown format should be treated as a miss. If it protects something, like a revocation list, fail safe instead of skipping the check.
-6. **Shared state breaks isolation.** A canary that writes to a shared store can break the stable version. Make formats compatible before a progressive rollout starts.
+5. **A down migration is a way back only if it has been run.** One that's never been exercised is untested. Prefer `expand-contract`, so rolling back the code never needs one.
+6. **Unknown cached data is a miss, unless it guards security.** If cached data can be rebuilt, an unknown format should be treated as a miss. If it protects something, like a revocation list, fail safe instead of skipping the check.
+7. **Shared state breaks isolation.** A canary that writes to a shared store can break the stable version. Make formats compatible before a progressive rollout starts.
 
 ## The mistake it prevents
 
