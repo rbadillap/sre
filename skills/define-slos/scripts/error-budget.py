@@ -14,8 +14,8 @@ Reads nothing, writes nothing: it only calculates.
 """
 
 import argparse
-import math
 import sys
+from decimal import Decimal, InvalidOperation
 
 
 def format_duration(minutes: float) -> str:
@@ -33,18 +33,26 @@ def fail(message: str) -> int:
     return 2
 
 
+def decimal(text: str) -> Decimal:
+    # Parsed from the text, not from a float: a target like 99.9 then means exactly 99.9.
+    try:
+        return Decimal(text)
+    except InvalidOperation:
+        raise argparse.ArgumentTypeError(f"not a number: {text}")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Error budget for an SLO target over a window.")
-    parser.add_argument("--slo", type=float, required=True, help="target in percent, for example 99.9")
+    parser.add_argument("--slo", type=decimal, required=True, help="target in percent, for example 99.9")
     parser.add_argument("--window-days", type=float, required=True, help="SLO window in days, for example 30")
     parser.add_argument("--good", type=int, help="good events so far in the window")
     parser.add_argument("--valid", type=int, help="valid events so far in the window")
-    parser.add_argument("--events-per-window", type=float, help="expected valid events per window, for event-based SLIs")
+    parser.add_argument("--events-per-window", type=decimal, help="expected valid events per window, for event-based SLIs")
     args = parser.parse_args()
 
     for name in ("slo", "window_days", "events_per_window"):
         value = getattr(args, name)
-        if value is not None and not math.isfinite(value):
+        if value is not None and not Decimal(value).is_finite():
             return fail(f"--{name.replace('_', '-')} must be a finite number")
     if not 0 < args.slo < 100:
         return fail("--slo must be between 0 and 100, exclusive")
@@ -57,29 +65,30 @@ def main() -> int:
     if args.events_per_window is not None and args.events_per_window <= 0:
         return fail("--events-per-window must be positive")
 
-    allowed_bad = 1 - args.slo / 100
+    allowed_bad = (100 - args.slo) / 100
     window_minutes = args.window_days * 1440
+    # Enough decimals to tell the achieved value from the target.
+    places = max(4, -args.slo.as_tuple().exponent + 2)
 
     print(f"SLO: {args.slo}% over {args.window_days:g} days")
-    print(f"Allowed failure: {allowed_bad * 100:.4g}% of valid events")
+    print(f"Allowed failure: {(allowed_bad * 100).normalize():f}% of valid events")
 
     if args.events_per_window is not None:
-        # Rounded so float error (1 - 0.999 is 0.000999...) doesn't turn a budget of 1 into 0.99.
-        budget = round(allowed_bad * args.events_per_window, 9)
+        budget = allowed_bad * args.events_per_window
         print(f"Event-based: {budget:.2f} bad events allowed per window, out of {args.events_per_window:g}")
         if budget < 1:
             print("warning: the budget is less than one event; a single failure breaks the SLO.")
             print("         Lower the target, lengthen the window, or alert on every failure instead of a budget.")
     else:
-        print(f"As time fully down: {format_duration(allowed_bad * window_minutes)} per window")
-        print(f"Per day, spread evenly: {format_duration(allowed_bad * 1440)}")
+        print(f"As time fully down: {format_duration(float(allowed_bad) * window_minutes)} per window")
+        print(f"Per day, spread evenly: {format_duration(float(allowed_bad) * 1440)}")
         print("(Time figures assume a continuously measured SLI. For rare events, use --events-per-window.)")
 
     if args.good is not None:
         bad = args.valid - args.good
-        budget_events = round(allowed_bad * args.valid, 9)
-        achieved = args.good / args.valid * 100
-        print(f"Achieved so far: {achieved:.4f}%")
+        budget_events = allowed_bad * args.valid
+        achieved = Decimal(args.good) / args.valid * 100
+        print(f"Achieved so far: {achieved:.{places}f}%")
         if budget_events < 1:
             print(f"Budget so far: {budget_events:.2f} bad events allowed at this volume; {bad} happened")
         else:
