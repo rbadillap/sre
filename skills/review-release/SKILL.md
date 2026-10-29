@@ -20,7 +20,7 @@ metadata:
 
 ## Steps
 
-1. **Establish the change.** Read the diff, or the description if there's no diff yet, and say which one you reviewed. Also read how it will ship: the pipeline, scripts or tools that move it to production.
+1. **Establish the change.** Read the diff, or the description if there's no diff yet, and say which one you reviewed. Also read how it will ship: the pipeline, scripts or tools that move it to production. Rules, flags and configuration that change behavior in production are part of the review too, even when they reach production through a console, an API or a system other than the usual pipeline. Name every path the change can take, including any emergency path.
 2. **Reframe.** Apply `reframe-first`. A deploy can succeed while the release fails. Review what users will get, not only whether the change installs.
 3. **Find the state.** Apply `state-is-special`, for the change and for the delivery itself. Answer each category, writing "none" where it applies: data stores, caches, queues, files, configuration stored outside the code, and the records of the system that delivers the release (artifact names, versions, device or server inventory). Say for each whether it's shared across versions or kept per instance.
 4. **Check compatibility across versions.** For shared state, name the transitions that must be safe during the rollout and after a rollback, and how they're tested.
@@ -30,6 +30,7 @@ metadata:
    - **Name the gate between steps:** what it checks, and whether a person or a script moves to the next step.
    - Set the observation time at each step longer than the delay of the effects you're waiting for. List the candidate effects and their delays.
    - Write abort criteria in advance. Compare with the stable version when there's traffic to compare; when there isn't, use absolute thresholds.
+   - An emergency path that skips the steps, such as one that answers an active attack in seconds, stays possible. Write when it may be used, who decides, what's watched after, and how to recover.
 7. **Check monitoring for the new behavior.** Apply `scope-and-signal`. If nothing would show that the new behavior is failing, it's a gap.
 8. **Give a verdict: ready, ready with conditions, or not ready.** For "ready with conditions", list each condition. For "not ready", offer options with the condition each depends on, applying `reversible-first`. Typical options: ship it turned off and enable it later; release to the smallest group first and hold; ship with minimum conditions (a tested recovery or forward fix, monitoring for the new behavior, a named owner, people available during and after). Adapt them when there are no flags or tenants.
 9. **Name who decides,** whatever the verdict. This skill makes risks and options clear; the person who owns the business risk decides, within existing policies. Mandatory security or compliance controls go through their exception process. If the decision goes against the recommendation, record which risk was accepted and by whom.
@@ -39,6 +40,7 @@ metadata:
 ## Done when
 
 - The change reviewed is named (diff or description) and the reframe is written.
+- Every path the change can take to production is named, and an emergency path has its conditions, owner, observation and recovery.
 - Every state category is answered, including "none", and marked shared or per instance.
 - Every artifact is marked rollback-safe or forward plan, with its conditions, and the way back after full release is written.
 - The rollout names its steps, the gate between them, observation times with the effects they wait for, and abort criteria.
