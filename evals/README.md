@@ -1,6 +1,6 @@
 # Evals
 
-Each eval checks that an agent with the skills loaded applies the method to a scenario. Every scenario comes from real use, written in general terms. The rules for writing one are in [docs/review/evals.md](../docs/review/evals.md).
+Each eval checks that an agent with the skills loaded applies the method to a scenario. Every scenario comes from real use, or from a public postmortem linked as its source, written in general terms. The rules for writing one are in [docs/review/evals.md](../docs/review/evals.md).
 
 One folder per orchestrator, one file per scenario. Each file has three parts:
 
