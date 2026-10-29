@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** proposes. It writes a plan. It runs no migration, restore or data change; every one of those is a step for a person.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Establish the change.** What structure changes, from what to what, and which code reads and writes it.
