@@ -18,9 +18,14 @@ Security owner: <person, paged at time>
 
 ## Timeline
 
+<!-- An action gets a new line for each status: proposed, done, result. Earlier lines stay, so the sequence isn't lost. -->
+
 | Happened (source) | Recorded | Fact or action, and who | Status | Label |
 |---|---|---|---|---|
-| <hh:mm, from log / record / person's report, or unknown> | <hh:mm, from the clock> | <what was seen or done, by whom> | <for an action: proposed / done / result> | <verified: how / hypothesis / not verified> |
+| <hh:mm, from log / record / person's report, or unknown> | <hh:mm from the clock, "same", or "unknown"> | <what was seen or done, by whom> | <for an action: proposed / done / result; "—" for a fact> | <verified: how / hypothesis / not verified> |
+| 02:10 (audit log) | 02:31 | Unknown access key created on a service account | — | verified: audit log |
+| 02:32 (proposed) | same | Set the key to inactive, undo by reactivating it | proposed | — |
+| unknown (person's report) | 02:40 | Security owner set the key to inactive | done | reported by the security owner |
 
 ## Containment
 
