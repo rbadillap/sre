@@ -22,19 +22,21 @@ metadata:
 2. **Reframe.** Apply `reframe-first`. The incident record has the reframe of the response; the postmortem asks a different question: not what broke, but what let it break and stay unnoticed.
 3. **Write the impact, confirmed.** Apply `verified-impact`: who, what, for how long, measured with the signal users live.
 4. **Rebuild the timeline.** Every key fact and decision with its time: when it started, when it was detected, when people responded, when it was mitigated, when it was resolved. The gaps between those times are findings.
-5. **Find the contributing factors, not one root cause.** Incidents usually need several things to go wrong. For each factor, say what made it possible. Write about systems and decisions, not people: "the alert depended on a tag nobody maintained", not "the team forgot the tag".
-6. **Ask why it wasn't detected sooner.** This question always gets its own section. If a signal was missing, name it, and recommend `find-blind-spots`.
-7. **Ask whether a check that existed wasn't used.** If a review, a runbook or a skill would have caught this but wasn't run, that's a contributing factor of its own: say which, and why it wasn't run.
-8. **Write what went well.** What limited the impact is worth keeping on purpose.
-9. **Turn lessons into defaults.** Apply `paved-road`. Every follow-up action says where it lives (a default, a pipeline check, a template field, an alert) and has one owner and a date. Prefer few actions that change defaults over many reminders.
-10. **Separate facts from guesses.** Apply `evidence-before-claims` across the whole document.
-11. **Note lessons for the playbook.** If the incident showed that a runbook, a template or a rule the team follows was wrong, missing or not used, write it in its own section with a status: proposed, or adopted (where, and when).
-12. **Write the result** in `reliability/postmortems/<date>-<slug>.md`.
+5. **Look for an earlier incident with the same cause.** Search `reliability/postmortems/`. If one exists, link it and answer why its actions didn't prevent this one: never done, done as a reminder instead of a default, or done in the wrong place. A first escalation for a fix that couldn't be undone is correct (`reversible-first`); a second one for the same cause is a failure of the earlier actions, and it's recorded as one.
+6. **Find the contributing factors, not one root cause.** Incidents usually need several things to go wrong. For each factor, say what made it possible. Write about systems and decisions, not people: "the alert depended on a tag nobody maintained", not "the team forgot the tag".
+7. **Ask why it wasn't detected sooner.** This question always gets its own section. If a signal was missing, name it, and recommend `find-blind-spots`. If the signal existed and people were used to it, such as a page that fires often and gets dismissed, that's a finding too. Name it, and recommend `design-alerts`.
+8. **Ask whether a check that existed wasn't used.** If a review, a runbook or a skill would have caught this but wasn't run, that's a contributing factor of its own: say which, and why it wasn't run.
+9. **Write what went well.** What limited the impact is worth keeping on purpose.
+10. **Turn lessons into defaults.** Apply `paved-road`. Every follow-up action says where it lives (a default, a pipeline check, a template field, an alert) and has one owner and a date. Prefer few actions that change defaults over many reminders.
+11. **Separate facts from guesses.** Apply `evidence-before-claims` across the whole document.
+12. **Note lessons for the playbook.** If the incident showed that a runbook, a template or a rule the team follows was wrong, missing or not used, write it in its own section with a status: proposed, or adopted (where, and when).
+13. **Write the result** in `reliability/postmortems/<date>-<slug>.md`.
 
 ## Done when
 
 - The reframe is written.
 - Impact, timeline, contributing factors and detection each have their section.
+- An earlier incident with the same cause is linked, with why its actions didn't prevent this one, or "none found" is written.
 - Checks that existed but weren't used are named, or "none" is written.
 - Every playbook lesson has a status.
 - Every action has a place, an owner and a date.
