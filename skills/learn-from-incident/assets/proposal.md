@@ -16,6 +16,14 @@ From: <link to the postmortem, incident record or review>
 |---|---|---|---|---|---|---|
 | 1 | <lesson> | <missing step, misleading step, unasked question, missing signal, unused check> | <state, and where it's covered or adopted> | <package, team path, sent back to the system> | <no / link> | <label> |
 
+## Recurring manual work
+
+<!-- Toil the record shows. Or "none found". Estimates are labeled; unknowns stay unknown. These numbers describe the work, never a person. -->
+
+| Task | How often | Human time per run | Period | Source | Label |
+|---|---|---|---|---|---|
+| <task> | <times per period, or unknown> | <minutes, or unknown> | <period> | <record line, log, estimate> | <label> |
+
 ## Proposals
 
 ### 1. <short title>
