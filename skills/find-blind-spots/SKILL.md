@@ -16,7 +16,7 @@ metadata:
 
 **Safety:** reads only. It looks at code, configuration and signals, and changes nothing except its own result file.
 
-**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+**Disciplines:** the steps apply disciplines from this package by name. Before applying one, find its `SKILL.md` and read it. If it isn't installed, don't guess its rule: say so in the result, recommend installing the whole package, go on only with work that doesn't depend on it, and mark what depends on it as incomplete.
 
 ## Steps
 
