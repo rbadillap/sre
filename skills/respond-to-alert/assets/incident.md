@@ -1,6 +1,6 @@
 # Incident: <short description>
 
-<!-- Filled by the respond-to-alert skill, as a running record. Add a line for every fact and action, with its time from the system clock and who did it. -->
+<!-- Filled by the respond-to-alert skill, as a running record. Add a line for every fact and action: when it happened, with its source and precision; when it was recorded, from the clock, if different; who did it; and, for an action, its status (proposed, done, result). -->
 
 Started: <date and time, with time zone>
 Severity: <level>
@@ -27,9 +27,9 @@ Communications owner: <person, if different>
 
 ## Timeline
 
-| Time | Fact or action | Verified, hypothesis or not verified |
-|---|---|---|
-| <hh:mm> | <what was seen or done> | <label, and how it was verified> |
+| Happened (source) | Recorded | Fact or action, and who | Status | Verified, hypothesis or not verified |
+|---|---|---|---|---|
+| <hh:mm, from log / record / person's report, or unknown> | <hh:mm, from the clock> | <what was seen or done, by whom> | <for an action: proposed / done / result> | <label, and how it was verified> |
 
 ## Hypotheses
 
