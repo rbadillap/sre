@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** proposes. Every containment action is a proposal for a person, with its risk and how to undo it. Nothing the attacker created is deleted; a compromised workload is replaced only after its evidence is captured.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Start the record, and bring in security.** Open the incident file with times from now on. A suspected compromise is a security incident until shown otherwise: page the security owner, and don't wait for them to start containing.
