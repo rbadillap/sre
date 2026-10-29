@@ -10,7 +10,7 @@ Rules for any agent working in this repository, each with its reason. How the pa
 ## Writing
 
 - English, plain words, short sentences. Why: readers may be on call, tired or reading in a second language.
-- Nothing personal: no companies, people, employers or private incidents. Why: the package teaches a method, in public.
+- Nothing personal: no companies, people, employers or private incidents. A link to public material, such as a provider's postmortem or guide, keeps its attribution; the text around it stays in general terms. Why: the package teaches a method, in public, and a citation without its source can't be checked.
 - A claim about an external framework, spec or number links to its source, and you've checked the source says it. Why: a method that cites wrongly loses trust.
 - Documents describe how things are now. Why: readers need the current rule; history is in git, and in `CHANGELOG.md` at each release.
 - Every rule says why it exists, on the same page. Why: this repository has no decision records, so the reasoning lives next to the rule.
