@@ -16,11 +16,11 @@ metadata:
 
 **Safety:** proposes. Every containment action is a proposal for a person, with its risk and how to undo it. Nothing the attacker created is deleted; a compromised workload is replaced only after its evidence is captured.
 
-**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+**Disciplines:** the steps apply disciplines from this package by name. Before applying one, find its `SKILL.md` and read it. If it isn't installed, don't guess its rule: say so in the result, recommend installing the whole package, go on only with work that doesn't depend on it, and mark what depends on it as incomplete.
 
 ## Steps
 
-1. **Start the record, and bring in security.** Open the incident file with times from now on. A suspected compromise is a security incident until shown otherwise: page the security owner, and don't wait for them to start containing.
+1. **Start the record, and bring in security.** Open the incident file with times from now on. Take each time from the system clock, in the time zone written in the header. Never estimate one. A time someone reports is written as reported, with who said it. A suspected compromise is a security incident until shown otherwise: page the security owner, and don't wait for them to start containing.
 2. **Reframe.** Apply `reframe-first`. Drift, an odd account or an open port may be a symptom of access, not a mistake.
 3. **Preserve evidence before changing anything.** Export the audit logs that cover the period, and save the current configuration of everything you're about to change.
 4. **Contain the access, within the first minutes.** Apply `reversible-first`, with its exception: preserve, then contain.
