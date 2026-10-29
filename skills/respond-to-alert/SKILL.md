@@ -36,6 +36,7 @@ metadata:
    - Security might be involved.
    - The cause is on a provider's side.
    - The incident is large enough that one person shouldn't fix and communicate at the same time.
+   - The person running a step can't confirm its target, or can't go on safely (`reversible-first`).
 10. **Keep updating.** Apply `verified-impact` on a regular rhythm until it's resolved.
 11. **Close with a handoff.** When the impact is over, write what happened, what was done and why, what's still open, and what was decided not to do.
 
