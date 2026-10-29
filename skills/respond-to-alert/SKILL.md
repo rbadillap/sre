@@ -16,11 +16,13 @@ metadata:
 
 **Safety:** proposes. It reads signals and proposes actions. A person runs every action in production, and anything irreversible is a proposal with its risk.
 
-**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+**Disciplines:** the steps apply disciplines from this package by name. Before applying one, find its `SKILL.md` and read it. If it isn't installed, don't guess its rule: say so in the result, recommend installing the whole package, go on only with work that doesn't depend on it, and mark what depends on it as incomplete.
 
 ## Steps
 
 1. **Start the timeline.** Create the incident file now, and add a line with the time for every fact and every action from here on.
+   - Take each time from the system clock, in the time zone written in the header. Never estimate one. A time someone reports is written as reported, with who said it.
+   - You only see what you run or read. After each action you propose, ask the person what they did and what happened, and add it to the timeline with their name. That's the scribe role in incident response ([PagerDuty's guide](https://response.pagerduty.com/training/scribe/)).
 2. **Reframe.** Apply `reframe-first`, and write the reframe in the record.
 3. **Scope it.** Apply `scope-and-signal`: regions, tenants, errors or latency, since when. Write the unknowns as unknowns.
 4. **Decide the severity, and declare if it's an incident.** If users are affected beyond the team's thresholds, declare it now and open a channel. Don't wait for the cause. Apply `verified-impact` for the first update, even without a cause.
