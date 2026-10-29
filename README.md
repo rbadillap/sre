@@ -31,6 +31,8 @@ npx skills add rbadillap/sre
 
 Or install it as a plugin from `https://github.com/rbadillap/sre` in any client that supports Agent Plugins.
 
+Install the whole package. Each skill applies shared disciplines by name, and a skill installed alone can't load them.
+
 ## Use
 
 Describe the situation to your agent in your own words ("latency is up and the cluster looks healthy", "can we ship this on Friday?", "Terraform wants to replace the database"). The skill's description matches what you say. If you're not sure where to start, ask for the `sre` skill.
