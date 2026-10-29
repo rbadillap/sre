@@ -15,6 +15,8 @@ metadata:
 
 **Safety:** reads only.
 
+**Disciplines:** the steps apply disciplines from this package by name. Before applying one, find its `SKILL.md` and read it. If it isn't installed, don't guess its rule: say so in the result, recommend installing the whole package, go on only with work that doesn't depend on it, and mark what depends on it as incomplete.
+
 ## Steps
 
 1. **Read the situation.** Apply `reframe-first` in one line: what's actually being asked?
