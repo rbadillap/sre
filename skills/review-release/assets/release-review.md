@@ -6,6 +6,8 @@ Reviewed on: <date>
 Reviewed by: <person or agent>
 Change: <link to the diff, or "description only: ...">
 Delivered by: <pipeline, scripts or tools>
+Other paths to production: <console, API or another system, or none>
+Emergency path: <when it may be used, who decides, what's watched, how to recover; or none>
 
 ## Reframe
 
