@@ -4,7 +4,7 @@ An eval checks that an agent with the skills loaded applies the method to a scen
 
 **1. It comes from real use.**
 - Why: invented scenarios test what the author already expected. Real ones test what happened.
-- Check: the eval says where the scenario came from, in general terms (a real incident, a release that went wrong). No names or private details.
+- Check: the eval says where the scenario came from, in general terms (a real incident, a release that went wrong). No names or private details. A public postmortem counts as real use: link it as the source, keep the scenario in general terms, and stop the facts at the moment the skill starts, so the published ending isn't given away.
 
 **2. It has three parts: the scenario, the expected moves, and what fails it.**
 - Why: "the answer looks good" isn't a test.
