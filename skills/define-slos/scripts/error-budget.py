@@ -64,7 +64,8 @@ def main() -> int:
     print(f"Allowed failure: {allowed_bad * 100:.4g}% of valid events")
 
     if args.events_per_window is not None:
-        budget = allowed_bad * args.events_per_window
+        # Rounded so float error (1 - 0.999 is 0.000999...) doesn't turn a budget of 1 into 0.99.
+        budget = round(allowed_bad * args.events_per_window, 9)
         print(f"Event-based: {budget:.2f} bad events allowed per window, out of {args.events_per_window:g}")
         if budget < 1:
             print("warning: the budget is less than one event; a single failure breaks the SLO.")
@@ -76,7 +77,7 @@ def main() -> int:
 
     if args.good is not None:
         bad = args.valid - args.good
-        budget_events = allowed_bad * args.valid
+        budget_events = round(allowed_bad * args.valid, 9)
         achieved = args.good / args.valid * 100
         print(f"Achieved so far: {achieved:.4f}%")
         if budget_events < 1:
