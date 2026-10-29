@@ -27,8 +27,8 @@ metadata:
 3. **Scope it.** Apply `scope-and-signal`: regions, tenants, errors or latency, since when. Write the unknowns as unknowns.
 4. **Decide the severity, and declare if it's an incident.** If users are affected beyond the team's thresholds, declare it now and open a channel. Don't wait for the cause. Apply `verified-impact` for the first update, even without a cause.
 5. **Follow the path of the request.** Walk the path users take, from the edge to the data: entry point, authentication, application, cache, queue, database, external dependencies. Compare latency and errors at each step to find where the time goes.
-6. **Look for what changed, even with no deploy.** Configuration, scheduled jobs, traffic (one large customer, retries piling up), dependency or provider maintenance, certificates, data growth.
-7. **Mitigate with what can be undone.** Apply `reversible-first`, including its check of second-order effects, and write each mitigation with how to undo it. If a mitigation touches data or state, apply `state-is-special` and hand it to a person.
+6. **Look for what changed, even with no deploy.** Configuration, scheduled jobs, traffic (one large customer, retries piling up), dependency or provider maintenance, certificates, data growth. Retries and redeliveries add load, and they can also repeat effects: duplicate charges, messages or writes. Treat that as a hypothesis until there's evidence.
+7. **Mitigate with what can be undone.** Apply `reversible-first`, including its check of second-order effects, and write each mitigation with how to undo it. If a mitigation touches data or state, apply `state-is-special` and hand it to a person. Before proposing to retry or replay work, apply `idempotency`: write what makes repeating it safe, and which effects stay uncertain. A timeout doesn't prove the work didn't happen. If safety can't be shown, don't present the retry as safe; propose another option or escalate.
 8. **Confirm the mitigation worked.** Apply `evidence-before-claims`: the user-facing signal recovers. If nothing changes, undo it and reconsider the hypothesis. When the mitigation is a new release, it goes through the same checks that let the failure through, so its "success" proves little: confirm it over a window longer than the failure's delay.
 9. **Escalate on clear criteria.** Bring in another person when any of these is true, and bring the context (what you checked, what you ruled out, what you think it is):
    - Users are still affected past the team's escalation threshold and there's no safe, reversible fix. If the team has none, use 15 to 20 minutes as a default, and list setting one as open in the handoff.
@@ -48,7 +48,7 @@ Investigation examples by platform are in [references/investigation.md](referenc
 - The scope is written: regions, groups, errors or latency, since when, with unknowns marked.
 - The severity is set, and whether an incident was declared.
 - What changed is written, or "nothing found" with what was checked.
-- Every mitigation has its time, how to undo it, and whether it worked.
+- Every mitigation has its time, how to undo it, and whether it worked. One that retries or replays work also says what makes repeating it safe and what stays uncertain.
 - Every escalation has its time and the criterion met, or "no escalation" with why.
 - Every update sent is recorded.
 - The user-facing signal is back to normal, confirmed.
