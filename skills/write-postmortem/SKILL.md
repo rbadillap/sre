@@ -16,6 +16,8 @@ metadata:
 
 **Safety:** proposes. It reads the incident record and writes a document. It changes nothing in production.
 
+**Disciplines:** the steps apply disciplines from this package by name. If one isn't installed, say so in the result and recommend installing the whole package. Don't guess its rule.
+
 ## Steps
 
 1. **Start from the record.** Read the incident file in `reliability/incidents/` if it exists. If not, rebuild the timeline from logs, messages and people, and say so.
