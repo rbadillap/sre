@@ -19,8 +19,10 @@ validate-skills: ## Check every SKILL.md against the Agent Skills spec
 		$(call agentskills,validate $$skill) || exit 1; \
 	done
 
-validate-metadata: ## Check every skill's sre-* metadata, and that each orchestrator has a template and a review row
+validate-metadata: ## Check every skill's sre-* metadata, that each orchestrator has a template and a review row, and that orchestrators and the router carry the same disciplines paragraph
 	@status=0; \
+	guard=$$(grep '^\*\*Disciplines:\*\* ' skills/sre/SKILL.md); \
+	[ -n "$$guard" ] || { echo "sre: missing the Disciplines paragraph"; status=1; }; \
 	for skill in $(SKILLS); do \
 		name=$$(basename $$skill); file=$$skill/SKILL.md; \
 		layer=$$(sed -n 's/^  sre-layer: //p' $$file); \
@@ -29,7 +31,8 @@ validate-metadata: ## Check every skill's sre-* metadata, and that each orchestr
 				grep -q '^  sre-stage: ' $$file || { echo "$$name: missing sre-stage"; status=1; }; \
 				grep -Eq '^  sre-safety: (reads-only|proposes|acts-with-approval)$$' $$file || { echo "$$name: missing or unknown sre-safety"; status=1; }; \
 				ls $$skill/assets/*.md >/dev/null 2>&1 || { echo "$$name: no template in assets/"; status=1; }; \
-				grep -q "^| \`$$name\` |" docs/review/skills.md || { echo "$$name: no row in docs/review/skills.md"; status=1; } ;; \
+				grep -q "^| \`$$name\` |" docs/review/skills.md || { echo "$$name: no row in docs/review/skills.md"; status=1; }; \
+				grep -qxF "$$guard" $$file || { echo "$$name: Disciplines paragraph differs from the router's"; status=1; } ;; \
 			router) \
 				grep -Eq '^  sre-safety: reads-only$$' $$file || { echo "$$name: router needs sre-safety: reads-only"; status=1; } ;; \
 			discipline) ;; \
