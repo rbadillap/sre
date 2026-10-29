@@ -20,7 +20,9 @@ metadata:
 
 ## Steps
 
-1. **Start the record, and bring in security.** Open the incident file with times from now on. Take each time from the system clock, in the time zone written in the header. Never estimate one. A time someone reports is written as reported, with who said it. A suspected compromise is a security incident until shown otherwise: page the security owner, and don't wait for them to start containing.
+1. **Start the record, and bring in security.** Open the incident file with times from now on. A suspected compromise is a security incident until shown otherwise: page the security owner, and don't wait for them to start containing.
+   - **Keep two times apart.** When something happened comes from where it was recorded: a log, a record, or a person's report, with that source and its precision ("about 10:00" stays approximate). When you wrote the line comes from the system clock, or a clock tool if there's no shell. If neither is available, write the time as unknown and ask for it when it matters, without stopping other work. Never work out a time from how long the conversation has taken. Write the time zone in the header, and keep both times when they differ.
+   - **Give every action a status.** You only see what you run or read. An action you propose goes in the timeline as proposed, then as done, reported by a person (with their name) or seen by you, then with its result. Proposing an action doesn't prove it ran. Ask only for what the record is missing. You also do the scribe's record keeping ([PagerDuty's guide](https://response.pagerduty.com/training/scribe/)), while you investigate, which a dedicated scribe doesn't.
 2. **Reframe.** Apply `reframe-first`. Drift, an odd account or an open port may be a symptom of access, not a mistake.
 3. **Preserve evidence before changing anything.** Export the audit logs that cover the period, and save the current configuration of everything you're about to change.
 4. **Contain the access, within the first minutes.** Apply `reversible-first`, with its exception: preserve, then contain.
