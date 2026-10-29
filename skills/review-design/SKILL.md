@@ -37,7 +37,7 @@ metadata:
 - What was reviewed is named, and the reframe is written.
 - Every dependency has its effect when slow, down and recovering, and is marked critical or not.
 - Shutdown, restart, health checks, repeated work, state and capacity each have a finding or a "no issue found".
-- Restore tests have an owner, a frequency, the last result with the recovery time, and an alert if they fail or stop, or each missing part is a finding.
+- Restore tests have an owner, a frequency with its reason, the last result with the data checked usable and the recovery time, an alert if they fail or stop, and a new test after relevant changes, or each missing part is a finding.
 - Operations has SLOs, alerts, a runbook and an owner, or the gap is a finding.
 - Every finding has a risk, a change and a blocking flag, and every claim is labeled.
 
