@@ -43,6 +43,13 @@ Written by: <person or agent>
 
 Monthly review owner: <person>
 Next review: <date>
+On-call load reported to: <whoever sets priorities>
+
+<!-- Each review adds a row. Out-of-hours pages are counted apart. -->
+
+| Period | Pages | Out of hours | Didn't need action |
+|---|---|---|---|
+| <month> | <count> | <count> | <count> |
 
 ## Not verified
 
