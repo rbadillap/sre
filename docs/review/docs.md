@@ -25,3 +25,7 @@ These rules apply to every page in the repository, and to the words any change a
 **6. The why sits next to the rule.**
 - Why: this repository doesn't keep decision records. The reasoning lives in the documents themselves.
 - Check: every convention or rule says why it exists, on the same page.
+
+**7. A skill page explains; `SKILL.md` decides.**
+- Why: a page in `docs/skills/` is for people choosing and reading a skill. If it held its own steps, it would become a second method that drifts from the one agents run.
+- Check: the page says when to choose the skill over another, what to have before starting, what result comes back and how to read it, what it doesn't solve, common questions and the next step. It can sum up the purpose or explain a result. It has no sequence of steps, "done" criteria or safety limits of its own, and it links to `SKILL.md` for the method.
