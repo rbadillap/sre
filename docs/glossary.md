@@ -8,6 +8,7 @@ The words the skills share. When a skill uses one of these terms, it means exact
 - **Discipline.** A skill that holds one rule the orchestrators follow. Its name states a principle, not a task. See [layers](layers.md#disciplines).
 - **Router.** The `sre` skill, which points to the right orchestrator for a situation.
 - **Template.** The structure a skill fills to leave a reusable result.
+- **Lesson.** A page in `academy/` that teaches one SRE topic from public sources. Skills appear in it only as references. See [the lesson review](review/academy.md).
 - **Skill page.** A page in `docs/skills/` that explains one skill to a person: when to choose it, what it needs, what it leaves and what it doesn't solve. The steps stay in `SKILL.md`.
 - **Paved road.** A way of working delivered as a default, so the reliable path is also the easiest one. In this package, the templates and the `reliability/` folder.
 - **`reliability/`.** The one folder in your repository where every skill writes its results.
