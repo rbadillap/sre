@@ -11,6 +11,7 @@ content/academy/<lang>/<NN-stage>/<NN-lesson>.md
 - **The root is the cycle:** `00-the-cycle`. Every other folder is one stage: define, design, ship, observe, respond, learn.
 - **Each lesson is one file,** with frontmatter: `title`, `stage`, `order`, `status`, `teaches`, `sources`, `skill`.
 - **`status`:** `outline` (a placeholder with what it teaches and its sources), `draft` (written, waiting for approval), or `approved`.
+- **`checked_against`:** the rbadillap/sre release the lesson's skill reference was checked against. When the package changes, lessons checked against an older release get rechecked.
 - **`<lang>`:** `en` for now. Another language gets its own folder, without moving files.
 
 ## How a lesson is written

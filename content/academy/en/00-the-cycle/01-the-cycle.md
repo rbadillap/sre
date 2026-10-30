@@ -6,6 +6,7 @@ status: draft
 teaches: The six stages, why they form a loop, and why you enter wherever the problem arrives.
 sources: Google SRE book, Part III (https://sre.google/sre-book/part-III-practices/); ITIL v3 lifecycle (https://en.wikipedia.org/wiki/ITIL); GitLab, 2017-01-31 (https://about.gitlab.com/blog/2017/02/10/postmortem-of-database-outage-of-january-31/)
 skill: none
+checked_against: sre 0.1.1
 ---
 
 # The cycle

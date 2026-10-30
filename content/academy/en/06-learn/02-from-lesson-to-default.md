@@ -6,6 +6,7 @@ status: outline
 teaches: A default, not a reminder.
 sources: GitLab, 2017 (the host shown in the prompt)
 skill: paved-road
+checked_against: sre 0.1.1
 ---
 
 # From lesson to default

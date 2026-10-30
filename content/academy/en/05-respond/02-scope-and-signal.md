@@ -6,6 +6,7 @@ status: outline
 teaches: By tenant, region and version; the average hides.
 sources: CASE NEEDED
 skill: scope-and-signal
+checked_against: sre 0.1.1
 ---
 
 # Scope and signal
