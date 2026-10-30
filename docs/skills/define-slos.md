@@ -1,6 +1,6 @@
 # define-slos
 
-Decides what "working" means for the people who use a system, and how much failure is acceptable. It leaves a written definition: the indicators, the targets, the error budget and what happens when the budget runs out.
+Helps define what "working" means for the people who use a system, and how much failure is acceptable. It leaves a written definition: the indicators, the targets, the error budget and what happens when the budget runs out.
 
 The method the agent follows is in [`SKILL.md`](../../skills/define-slos/SKILL.md). This page helps you choose the skill and read what it leaves.
 
