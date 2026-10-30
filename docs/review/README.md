@@ -17,5 +17,6 @@ A change passes when every rule that applies to it passes. If a rule doesn't fit
 | A template | [templates.md](templates.md) |
 | An eval | [evals.md](evals.md) |
 | A document | [docs.md](docs.md) |
+| A lesson | [academy.md](academy.md) |
 
 Every change also follows [docs.md](docs.md) for the words it adds.
