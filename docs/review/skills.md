@@ -80,3 +80,7 @@ New orchestrators add their row here in the same pull request.
 **13. "Done when" can be checked, and covers every step that produces something.**
 - Why: a skill can be "done" while skipping the steps that find the most.
 - Check: every criterion can be answered yes or no by reading the result. Every step whose output goes into the template appears in a criterion, including the reframe and the verified, hypothesis and not verified split.
+
+**14. Its page for people still matches.**
+- Why: the page in `docs/skills/` explains the skill to a person. If the skill changes and the page doesn't, people read one thing and the agent does another.
+- Check: if the skill has a page and the change alters what the skill does, needs or leaves, the page says the same after the change. A typo fix doesn't need a page change.
