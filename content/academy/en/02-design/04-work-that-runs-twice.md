@@ -6,7 +6,7 @@ status: outline
 teaches: Idempotency and safe retries.
 sources: Stripe, Idempotency (https://stripe.com/blog/idempotency); AWS Builders' Library, Making retries safe with idempotent APIs
 skill: idempotency
-checked_against: sre 0.1.1
+version: 0.1.1
 ---
 
 # Work that runs twice

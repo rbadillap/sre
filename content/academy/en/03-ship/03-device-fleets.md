@@ -6,7 +6,7 @@ status: outline
 teaches: Recovery has to survive the failure it's meant to fix.
 sources: Mender documentation (https://docs.mender.io/)
 skill: review-release
-checked_against: sre 0.1.1
+version: 0.1.1
 ---
 
 # Device fleets

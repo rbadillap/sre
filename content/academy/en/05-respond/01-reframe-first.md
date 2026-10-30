@@ -6,7 +6,7 @@ status: outline
 teaches: The real problem before the obvious one.
 sources: Cloudflare, 2019 (first suspected as an attack)
 skill: reframe-first
-checked_against: sre 0.1.1
+version: 0.1.1
 ---
 
 # Reframe first

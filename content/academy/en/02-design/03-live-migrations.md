@@ -6,7 +6,7 @@ status: outline
 teaches: Expand and contract, dual writes and batched backfills.
 sources: Stripe, Online migrations at scale (https://stripe.com/blog/online-migrations)
 skill: plan-migration
-checked_against: sre 0.1.1
+version: 0.1.1
 ---
 
 # Live migrations

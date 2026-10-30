@@ -6,7 +6,7 @@ status: outline
 teaches: Drains, replicas, batches and conditions to stop.
 sources: CASE NEEDED
 skill: plan-maintenance
-checked_against: sre 0.1.1
+version: 0.1.1
 ---
 
 # Maintenance

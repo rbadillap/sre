@@ -6,7 +6,7 @@ status: outline
 teaches: What let it break and stay unnoticed.
 sources: GitLab, 2017; Google SRE book, Postmortem Culture (https://sre.google/sre-book/postmortem-culture/)
 skill: write-postmortem
-checked_against: sre 0.1.1
+version: 0.1.1
 ---
 
 # Postmortems

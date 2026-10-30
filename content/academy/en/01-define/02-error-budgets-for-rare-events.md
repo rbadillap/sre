@@ -6,7 +6,7 @@ status: outline
 teaches: Counting the budget in events, not minutes, when events are few.
 sources: Google SRE book, Embracing Risk (https://sre.google/sre-book/embracing-risk/)
 skill: define-slos
-checked_against: sre 0.1.1
+version: 0.1.1
 ---
 
 # Error budgets for rare events

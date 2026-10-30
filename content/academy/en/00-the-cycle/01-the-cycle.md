@@ -2,11 +2,11 @@
 title: The cycle
 stage: the-cycle
 order: 1
-status: draft
+status: approved
 teaches: The six stages, why they form a loop, and why you enter wherever the problem arrives.
 sources: Google SRE book, Part III (https://sre.google/sre-book/part-III-practices/); ITIL v3 lifecycle (https://en.wikipedia.org/wiki/ITIL); GitLab, 2017-01-31 (https://about.gitlab.com/blog/2017/02/10/postmortem-of-database-outage-of-january-31/)
 skill: none
-checked_against: sre 0.1.1
+version: 0.1.1
 ---
 
 # The cycle
@@ -63,4 +63,4 @@ Think of the last incident you saw or read about. Which stage did it enter at? A
 
 ---
 
-_Written with an AI assistant from the sources above. Draft until approved._
+_Written with an AI assistant from the sources above._

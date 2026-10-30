@@ -6,7 +6,7 @@ status: outline
 teaches: What wakes someone up and what waits until morning.
 sources: Google SRE book, Monitoring Distributed Systems (https://sre.google/sre-book/monitoring-distributed-systems/)
 skill: design-alerts
-checked_against: sre 0.1.1
+version: 0.1.1
 ---
 
 # Symptoms, not causes

@@ -6,7 +6,7 @@ status: outline
 teaches: Only confirmed impact, from the first update.
 sources: GitLab, 2017 (live stream)
 skill: verified-impact
-checked_against: sre 0.1.1
+version: 0.1.1
 ---
 
 # Confirmed impact
