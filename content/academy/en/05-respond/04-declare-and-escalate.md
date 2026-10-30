@@ -44,7 +44,7 @@ Two rules from the same guidance:
 - If you're unsure between two levels, treat it as the higher one. Severity is debated in the postmortem, not during the incident.
 - Each level's definition should be specific and measurable, such as the share of users or accounts affected.
 
-Escalating is moving up this scale when the facts change, and bringing in the people that level calls for.
+A lower-severity issue can also be escalated when it needs a coordinated response, and the IC makes that call.
 
 ## Who does what
 
