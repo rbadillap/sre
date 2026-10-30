@@ -9,10 +9,10 @@ Rules for any agent working in this repository, each with its reason. How the pa
 
 ## Writing
 
-- English, plain words, short sentences. Why: readers may be on call, tired or reading in a second language.
-- Nothing personal: no companies, people, employers or private incidents. A link to public material, such as a provider's postmortem or guide, keeps its attribution; the text around it stays in general terms. Why: the package teaches a method, in public, and a citation without its source can't be checked.
+- English, plain words, short sentences. Inside `academy/`, a lesson is written in the language of its `<lang>` folder. Why: readers may be on call, tired or reading in a second language, and a lesson is easier to learn from in the reader's own language.
+- Nothing personal: no companies, people, employers or private incidents. A link to public material, such as a provider's postmortem or guide, keeps its attribution; the text around it stays in general terms. In `academy/`, a lesson may name the organizations and products a linked public case needs, as long as its claims match the source, published facts stay apart from the lesson's interpretation and examples, and no people's identities, employer experiences or private details are added. Why: the package teaches a method, in public, and a citation without its source can't be checked; in a lesson, the public case is what's being taught. The exception doesn't reach skills, disciplines or evals.
 - A claim about an external framework, spec or number links to its source, and you've checked the source says it. Why: a method that cites wrongly loses trust.
-- Documents describe how things are now. Why: readers need the current rule; history is in git, and in `CHANGELOG.md` at each release.
+- Documents describe how things are now. A lesson may tell the story of a past incident; what it says about the package still describes the package as it is. Why: readers need the current rule; history is in git, and in `CHANGELOG.md` at each release.
 - Every rule says why it exists, on the same page. Why: this repository has no decision records, so the reasoning lives next to the rule.
 - Use the terms in `docs/glossary.md` as defined there, and add a new shared term in the same change. Why: skills read the same words the same way.
 
@@ -40,7 +40,8 @@ Rules for any agent working in this repository, each with its reason. How the pa
 
 ## Commits
 
-- Message format: `area: what changed, in plain words`, where the area is the folder or file touched (`docs`, `skills`, `evals`, `base`). Why: the log reads as a list of changes.
+- Message format: `area: what changed, in plain words`, where the area is the folder or file touched (`docs`, `skills`, `evals`, `academy`, `base`). `academy` is for lessons; the rules about them in `docs/review/` use `docs`. Why: the log reads as a list of changes.
+- Lessons follow `docs/review/academy.md`, and only a person marks a lesson `approved`. Why: a lesson teaches people directly, so a person answers for it.
 - One commit per document, skill or template. Why: each can be reviewed or reverted alone.
 - `CHANGELOG.md` gets an entry only when a version is released. Why: between releases, git is the record; the changelog is for users.
 - Commits are signed. If signing fails, stop and ask; never bypass it. Why: signatures are how readers know who changed what.
