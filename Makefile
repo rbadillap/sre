@@ -1,18 +1,22 @@
 SKILLS_REF_VERSION       ?= 0.1.1
 CHECK_JSONSCHEMA_VERSION ?= 0.38.2
-PLUGIN_SCHEMA            ?= https://agent-plugins.org/schemas/1.0.0/plugin.schema.json
+PYYAML_VERSION           ?= 6.0.3
+PLUGIN_SCHEMA           ?= https://agent-plugins.org/schemas/1.0.0/plugin.schema.json
 
 SKILLS := $(sort $(dir $(wildcard skills/*/SKILL.md)))
 
 agentskills = uvx --from skills-ref==$(SKILLS_REF_VERSION) agentskills $(1)
 
 .DEFAULT_GOAL := help
-.PHONY: help validate validate-skills validate-metadata validate-manifest
+.PHONY: help validate validate-skills validate-metadata validate-manifest validate-academy
 
 help: ## List targets
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## ' $(MAKEFILE_LIST) | awk 'BEGIN {FS = ":.*?## "}; {printf "  %-20s %s\n", $$1, $$2}'
 
-validate: validate-manifest validate-skills validate-metadata ## Check the manifest, every skill against its spec, and the package's own metadata
+validate: validate-manifest validate-skills validate-metadata validate-academy ## Check the manifest, every skill against its spec, the package's own metadata, and every lesson's frontmatter
+
+validate-academy: ## Check every lesson's path and frontmatter against docs/review/academy.md
+	@uv run -q --no-project --with pyyaml==$(PYYAML_VERSION) python scripts/validate-academy.py
 
 validate-skills: ## Check every SKILL.md against the Agent Skills spec
 	@for skill in $(SKILLS); do \
