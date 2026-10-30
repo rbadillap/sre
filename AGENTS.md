@@ -35,7 +35,7 @@ Rules for any agent working in this repository, each with its reason. How the pa
 
 ## Validation
 
-- Run `make validate` before every commit that touches `skills/` or `plugin.json`. It needs `uv`. Why: a broken frontmatter makes a skill invisible to agents.
+- Run `make validate` before every commit that touches `skills/`, `academy/` or `plugin.json`. It needs `uv`. Why: a broken frontmatter makes a skill invisible to agents, and a lesson unreadable by the tools that list it.
 - Pin tool versions in the `Makefile` from their live registries, at least 7 days old. Why: reproducible checks, and time for bad releases to be pulled.
 
 ## Commits
