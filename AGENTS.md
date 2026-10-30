@@ -26,6 +26,7 @@ Rules for any agent working in this repository, each with its reason. How the pa
 - Every `SKILL.md` has `name` matching its folder, a `description` that says when to use it, `license: MIT`, and `metadata` with `sre-layer`, plus `sre-stage` for orchestrators and `sre-safety` for orchestrators and the router. Why: the specs require the first ones, and `make validate` checks the `sre-*` keys so the docs and the skills can't disagree.
 - Disciplines are applied by name, never copied. Why: two copies drift apart.
 - A new orchestrator adds its row of moves to `docs/review/skills.md` in the same change. Why: the row is what its review checks.
+- A change to how a skill behaves reviews its page in `docs/skills/`, if it has one, and updates in the same change whatever the change left out of date. A page holds no steps, "done" criteria or safety limits of its own; it links to `SKILL.md` for them. Why: `SKILL.md` is written for agents and the page for people, and two sets of steps drift apart. A typo fix doesn't need a page change.
 
 ## Manifest
 
