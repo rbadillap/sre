@@ -37,18 +37,18 @@ A file at `reliability/postmortems/<date>-<slug>.md`, from [the template](../../
 ## What it doesn't solve
 
 - It changes nothing in production. The actions it proposes are for people to take.
-- It doesn't find one root cause, because there usually isn't one.
+- It doesn't stop at one root cause. It looks for every contributing factor.
 - It doesn't judge people. Blame makes people less likely to bring problems to light ([Google SRE book, Postmortem Culture](https://sre.google/sre-book/postmortem-culture/)).
 
 ## Common questions
 
-**Why several factors instead of a root cause?** One cause gives you someone to blame. Several factors give you several things to change, and the change that stops the next incident is often not the obvious one.
+**Why several factors instead of a root cause?** Looking for contributing factors keeps the analysis from stopping at the first failure it finds. It looks at the conditions and decisions that let the incident happen, and each one is a chance to prevent the next.
 
 **What if the same thing already happened?** The postmortem links the earlier one and asks why its actions didn't work: never done, done as a reminder instead of a default, or done in the wrong place. The new actions climb toward a default or a blocking check.
 
 **Can we skip "what went well"?** It's short, but keep it. What limited the impact is worth keeping on purpose.
 
-**Who writes it?** The skill drafts it from the record. The people who responded check it, since they know what the record missed.
+**Who writes it?** The skill drafts it from the available record and marks what it could not verify.
 
 ## Next step
 
