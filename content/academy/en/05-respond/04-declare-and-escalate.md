@@ -2,7 +2,7 @@
 title: Declare and escalate
 stage: respond
 order: 4
-status: draft
+status: approved
 teaches: When something is an incident, how big the response is, and what to bring when you call someone.
 sources: Google SRE book, Managing Incidents (https://sre.google/sre-book/managing-incidents/); PagerDuty Incident Response documentation, Severity Levels (https://response.pagerduty.com/before/severity_levels/) and During an Incident (https://response.pagerduty.com/during/during_an_incident/); Atlassian, April 2022 outage (https://www.atlassian.com/engineering/post-incident-review-april-2022-outage)
 skill: respond-to-alert
