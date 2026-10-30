@@ -44,6 +44,7 @@ Describe the situation to your agent in your own words ("latency is up and the c
 - [Layers](docs/layers.md): router, orchestrators, disciplines, templates, safety and learning.
 - [Landscape](docs/landscape.md): what else exists, and where this fits.
 - [Review](docs/review/README.md): the rules every change meets.
+- Skill pages, for people choosing a skill. Two so far: [define-slos](docs/skills/define-slos.md) and [write-postmortem](docs/skills/write-postmortem.md). The other skills have only their `SKILL.md`.
 
 ## License
 
