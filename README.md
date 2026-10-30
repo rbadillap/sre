@@ -9,7 +9,7 @@ A senior SRE's method, packaged as agent skills.
 
 Most SRE skill packs are organized like the chapters of a book: one skill for SLOs, one for incidents, one for postmortems. This one follows the work itself. It moves through a lifecycle (define, design, ship, observe, respond, learn), and every orchestrator leaves a reusable result in your repository, under `reliability/`.
 
-> **Status:** version 0.1.0, the first release. See the [changelog](CHANGELOG.md).
+> **Status:** version 0.1.1. See the [changelog](CHANGELOG.md).
 
 ## What's inside
 

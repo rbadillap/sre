@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "sre",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A senior SRE's method as agent skills: define, design, ship, observe, respond and learn, with every result left as a reusable path in reliability/.",
   "author": {
     "name": "Ronny Badilla",
