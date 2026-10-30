@@ -4,14 +4,14 @@ stage: respond
 order: 4
 status: draft
 teaches: Clear criteria, with context.
-sources: PagerDuty Incident Response documentation, During an Incident (https://response.pagerduty.com/during/during_an_incident/)
+sources: PagerDuty Incident Response documentation, During an Incident (https://response.pagerduty.com/during/during_an_incident/); Google SRE book, Managing Incidents (https://sre.google/sre-book/managing-incidents/)
 skill: respond-to-alert
 version: 0.1.1
 ---
 
 # Escalate
 
-_Source: [PagerDuty's incident response documentation, "During an Incident"](https://response.pagerduty.com/during/during_an_incident/)._
+_Sources: [PagerDuty's incident response documentation, "During an Incident"](https://response.pagerduty.com/during/during_an_incident/), and [Google's SRE book, "Managing Incidents"](https://sre.google/sre-book/managing-incidents/)._
 
 ## The question
 
@@ -27,27 +27,33 @@ Calling for help too late costs time. Calling without context costs the other pe
 
 ## When to escalate
 
-The guidance leans toward calling early, and a team turns that into criteria written before the incident, so nobody has to judge it alone at three in the morning. Typical criteria:
+Google's SRE book gives three questions. If any answer is yes, it's an incident, and it's run as one:
 
-1. Users are still affected past the team's threshold, and there's no safe, reversible fix.
-2. Data or security might be involved.
-3. The cause is on a provider's side.
-4. The incident is big enough that one person shouldn't fix it and communicate at the same time.
+1. Do you need to involve a second team to fix the problem?
+2. Is the outage visible to customers?
+3. Is the issue still unsolved after an hour of concentrated analysis?
+
+Its advice on timing matches PagerDuty's: it's better to declare an incident early than to start the process hours into a growing problem.
+
+The book also splits the work into roles, so one person isn't fixing and communicating at once: the incident commander holds the overall picture, operations is the only group changing the system, communications is the public face, and planning handles the longer-term work, like filing bugs. When someone's load gets too heavy, they ask for more people.
 
 ## What to bring
 
-The same thing an expert reports to the IC: what you checked, what you ruled out, and what you think it is, saying clearly which parts are confirmed and which are still a hypothesis. The person you call starts from there instead of from zero.
+What PagerDuty asks experts to report to the IC: your findings, and whether the cause is confirmed or still being investigated. Put as findings, that's what you checked, what you ruled out, and what you think it is, with the confirmed parts apart from the hypothesis. The person you call starts from there instead of from zero.
 
-_If you use rbadillap/sre: `respond-to-alert` lists escalation criteria like these, with a default threshold when the team has none._
+_If you use rbadillap/sre: `respond-to-alert` asks for the team's escalation criteria, and suggests a default when there are none._
 
 ## In one sentence
 
-"I escalate on criteria we wrote before the incident, and I bring what I checked, what I ruled out, and what I think it is."
+"I declare early, on criteria written before the incident, and when I bring someone in, I bring what I checked, what I ruled out, and what I think it is."
 
 ## Exercise
 
-You've been on an incident for 20 minutes, users are still affected, and your one fix didn't work. Write the message you'd send when you page someone: three lines, no more.
+Two parts:
+
+1. Your team has no written criteria. Using Google's three questions as a starting point, write the criteria you'd propose, with one threshold of your own.
+2. You've been on an incident for 20 minutes, users are still affected, and your one fix didn't work. Write the message you'd send when you page someone: three lines, no more.
 
 ---
 
-_Written with an AI assistant from the source above._
+_Written with an AI assistant from the sources above._
