@@ -25,3 +25,7 @@ A discipline is a rule every orchestrator follows. It's small on purpose.
 **6. It's used by at least one orchestrator.**
 - Why: a discipline nobody calls is dead text.
 - Check: search the orchestrators for its name.
+
+**7. Its page for people still matches.**
+- Why: the page in `docs/skills/` explains the discipline to a person. If the rule changes and the page doesn't, people read one thing and the agent does another.
+- Check: if the discipline has a page and the change alters its rule or when it applies, the page says the same after the change. A typo fix doesn't need a page change.
