@@ -31,10 +31,10 @@ NIST's incident handling guide, and the CircleCI case, point to four differences
 
 1. **Containment is a decision with its own criteria.** NIST lists them: the damage and theft at stake, the need to preserve evidence, service availability, the time and resources the strategy takes, how complete it is, and how long it lasts. It also warns that containing an attack can cause more damage, so disconnecting a host doesn't prove the harm has stopped.
 2. **Preserve evidence early.** NIST says it's generally best to capture a system's state as soon as an incident is suspected, before handlers and administrators change it while investigating. Evidence is logged, and every handoff is recorded.
-3. **Find every affected system.** NIST's eradication step includes disabling breached accounts and identifying all affected hosts, so each one gets fixed. At CircleCI, that meant revoking and rotating every customer token the stolen access could have reached.
+3. **Find every affected system.** NIST's eradication step includes disabling breached accounts and identifying all affected hosts, so each one gets fixed. At CircleCI, that meant revoking all project API tokens and older personal API tokens, and rotating customers' GitHub and Bitbucket tokens.
 4. **Revoke sessions, not only passwords, and search from the start.** At CircleCI, two-factor authentication didn't stop the attacker, who stole a session that had already passed it. Customers were asked to check for misuse from December 16, the day of the compromise, not the day it was found.
 
-NIST also notes that a resource attacked once is often attacked again, which is why recovery usually adds logging and monitoring.
+NIST also notes that higher levels of logging and monitoring are often part of recovery, and that a resource attacked once is often attacked again.
 
 _If you use rbadillap/sre: `contain-security-incident` follows these steps._
 
