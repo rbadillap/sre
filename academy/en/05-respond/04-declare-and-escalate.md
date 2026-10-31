@@ -3,7 +3,7 @@ title: "Declare and escalate"
 stage: respond
 order: 4
 status: approved
-teaches: "When something is an incident, how big the response is, and what to bring when you call someone."
+teaches: "Decide when something is an incident and how big the response should be, and know what to bring when you call someone."
 sources:
   - title: "Google SRE book, Managing Incidents"
     url: https://sre.google/sre-book/managing-incidents/

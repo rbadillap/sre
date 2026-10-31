@@ -3,7 +3,7 @@ title: "The cycle"
 stage: the-cycle
 order: 1
 status: approved
-teaches: "The six stages, why they form a loop, and why you enter wherever the problem arrives."
+teaches: "Place a problem in one of the six stages, explain why they form a loop, and start wherever the problem arrives."
 sources:
   - title: "Google SRE book, Part III: Practices"
     url: https://sre.google/sre-book/part-III-practices/
