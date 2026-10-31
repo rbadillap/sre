@@ -48,7 +48,7 @@ Learn feeds back into Define and Design. A postmortem can change an SLO, a revie
 GitLab's 2017 outage shows the loop. Each finding below comes from its postmortem:
 
 - **Respond:** during a replication incident, data was deleted on the primary database instead of the secondary.
-- **Respond:** the restore came from a snapshot about six hours old, because the regular backups weren't working.
+- **Respond:** the restore came from a snapshot about six hours old, after other recovery options failed or weren't available.
 - **Observe:** the backups had been failing without anyone noticing, because the alert emails were being rejected.
 
 Read through the cycle, the lesson isn't "be careful with commands". It lands in two other stages: in Design, restores that are tested before they're needed; in Observe, an alert that reaches someone. One incident in Respond changes Observe and Design.
